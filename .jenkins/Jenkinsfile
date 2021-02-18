@@ -1,0 +1,91 @@
+pipeline {
+	agent {
+		label 'docker'
+	}
+	options {
+		buildDiscarder(logRotator(numToKeepStr: '5'))
+		disableConcurrentBuilds()
+		ansiColor('xterm')
+	}
+	stages {
+		stage('Build') {
+			steps {
+				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn --registry=https://registry.npmjs.org install'
+				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn build'
+			}
+		}
+		stage('Test') {
+			steps {
+				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn test'
+			}
+		}
+		stage('Docs') {
+			when {
+				not {
+					equals expected: 'UNSTABLE', actual: currentBuild.result
+				}
+			}
+			steps {
+				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn storybook:export'
+				sh 'tar -czvf storybook-static.tgz storybook-static'
+				archiveArtifacts(artifacts: 'storybook-static.tgz', allowEmptyArchive: false)
+			}
+		}
+		stage('Docs Deploy') {
+			when {
+				allOf {
+					branch 'master'
+					not {
+						equals expected: 'UNSTABLE', actual: currentBuild.result
+					}
+				}
+			}
+			steps {
+				withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'npm-s3-docs', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+					sh """docker run --rm \\
+						--name trts-docs-upload \\
+						-e S3_BUCKET=jc21-tabler-react-typescript \\
+						-e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \\
+						-e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \\
+						-v \$(pwd):/app \\
+						-w /app \\
+						jc21/ci-tools \\
+						scripts/docs-upload /app/storybook-static/
+					"""
+
+					/*
+					sh """docker run --rm \\
+						--name trts-docs-invalidate \\
+						-e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \\
+						-e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \\
+						jc21/ci-tools \\
+						aws cloudfront create-invalidation --distribution-id E2Z0128EHS0Q23 --paths '/*'
+					"""
+					*/
+				}
+			}
+		}
+	}
+	post {
+		success {
+			/*
+			withNPM(npmrcConfig: 'npm-jc21') {
+				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim npm --registry=https://registry.npmjs.org publish --access public || echo "Skipping publish"'
+			}
+			withNPM(npmrcConfig: 'npm-github-jc21') {
+				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim npm --registry=https://npm.pkg.github.com/ publish --access public || echo "Skipping publish"'
+			}
+			*/
+			juxtapose event: 'success'
+			sh 'figlet "SUCCESS"'
+		}
+		failure {
+			juxtapose event: 'failure'
+			sh 'figlet "FAILURE"'
+		}
+		always {
+			// Fix file ownership
+			sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim chown -R $(id -u):$(id -g) *'
+		}
+	}
+}
