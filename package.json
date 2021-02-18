@@ -10,7 +10,7 @@
 	"description": "React Components for Tabler",
 	"scripts": {
 		"build": "rollup -c",
-		"test": "jest",
+		"test": "jest --passWithNoTests",
 		"test:watch": "jest --watch",
 		"lint": "yarn jest --config jest.eslint.js --watch",
 		"lint:ci": "yarn lint --watchAll=false",

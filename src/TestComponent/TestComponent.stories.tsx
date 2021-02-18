@@ -2,7 +2,7 @@ import React from "react";
 
 import { ThemeProvider } from "styled-components";
 
-import { DarkTheme, LightTheme, TablerStyles } from "../theme";
+import { DarkTheme, LightTheme, TablerStyles } from "../Theme";
 import TestComponent from "./TestComponent";
 
 const TestComponentStory = {
