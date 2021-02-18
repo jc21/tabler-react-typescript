@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const TablerStyles = createGlobalStyle`
   *,
@@ -20,4 +20,4 @@ export const TablerStyles = createGlobalStyle`
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     transition: all 0.25s linear;
   }
-`
+`;
