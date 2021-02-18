@@ -3,25 +3,33 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 
 import { DarkTheme, LightTheme, TablerStyles } from "../Theme";
-import TestComponent from "./TestComponent";
+import Button from "./Button";
 
-const TestComponentStory = {
-	title: "TestComponent",
+const Story = {
+	title: "Button",
 };
+
+const Examples = (
+	<>
+		<Button>Default</Button> <Button color="primary">Primary</Button>{" "}
+		<Button color="secondary">Secondary</Button>{" "}
+		<Button disabled>Disabled</Button>
+	</>
+);
 
 const Light = () => (
 	<ThemeProvider theme={LightTheme}>
 		<TablerStyles />
-		<TestComponent />
+		{Examples}
 	</ThemeProvider>
 );
 
 const Dark = () => (
 	<ThemeProvider theme={DarkTheme}>
 		<TablerStyles />
-		<TestComponent />
+		{Examples}
 	</ThemeProvider>
 );
 
-export default TestComponentStory;
+export default Story;
 export { Light, Dark };

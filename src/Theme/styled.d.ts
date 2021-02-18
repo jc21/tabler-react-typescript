@@ -4,10 +4,14 @@ import "styled-components";
 // and extend them!
 declare module "styled-components" {
 	export interface DefaultTheme {
-		body: string;
-		text: string;
-		toggleBorder: string;
-		gradient: string;
-		abc: string;
+		body: {
+			background: string;
+			color: string;
+		};
+		scrollbar: {
+			thumb: string;
+			track: string;
+			hoverThumb: string;
+		};
 	}
 }
