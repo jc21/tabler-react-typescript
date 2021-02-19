@@ -1,9 +1,13 @@
 import React from "react";
 
-import { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 
-import { DarkTheme, LightTheme, TablerStyles } from "../Theme";
+import { TablerStyles } from "../Theme";
 import Button from "./Button";
+
+const PaddedDiv = styled.div`
+	padding: 18px 0 0 18px;
+`;
 
 const Story = {
 	title: "Button",
@@ -11,25 +15,255 @@ const Story = {
 
 const Examples = (
 	<>
-		<Button>Default</Button> <Button color="primary">Primary</Button>{" "}
-		<Button color="secondary">Secondary</Button>{" "}
-		<Button disabled>Disabled</Button>
+		<PaddedDiv>
+			<h1>Button</h1>
+			<div className="btn-list">
+				<Button color="primary">Primary</Button>
+				<Button color="secondary">Secondary</Button>
+				<Button color="success">Success</Button>
+				<Button color="warning">Warning</Button>
+				<Button color="danger">Danger</Button>
+				<Button color="info">Info</Button>
+				<Button color="light">Light</Button>
+				<Button color="dark">Dark</Button>
+			</div>
+		</PaddedDiv>
+		<PaddedDiv>
+			<h2>Disabled</h2>
+			<div className="btn-list">
+				<Button disabled color="primary">
+					Primary
+				</Button>
+				<Button disabled color="secondary">
+					Secondary
+				</Button>
+				<Button disabled color="success">
+					Success
+				</Button>
+				<Button disabled color="warning">
+					Warning
+				</Button>
+				<Button disabled color="danger">
+					Danger
+				</Button>
+				<Button disabled color="info">
+					Info
+				</Button>
+				<Button disabled color="light">
+					Light
+				</Button>
+				<Button disabled color="dark">
+					Dark
+				</Button>
+			</div>
+		</PaddedDiv>
+		<PaddedDiv>
+			<h2>Loading</h2>
+			<div className="btn-list">
+				<Button loading color="primary">
+					Primary
+				</Button>
+				<Button loading color="secondary">
+					Secondary
+				</Button>
+				<Button loading color="success">
+					Success
+				</Button>
+				<Button loading color="warning">
+					Warning
+				</Button>
+				<Button loading color="danger">
+					Danger
+				</Button>
+				<Button loading color="info">
+					Info
+				</Button>
+				<Button loading color="light">
+					Light
+				</Button>
+				<Button loading color="dark">
+					Dark
+				</Button>
+			</div>
+		</PaddedDiv>
+		<PaddedDiv>
+			<h2>Ghost</h2>
+			<div className="btn-list">
+				<Button shape="ghost" color="primary">
+					Primary
+				</Button>
+				<Button shape="ghost" color="secondary">
+					Secondary
+				</Button>
+				<Button shape="ghost" color="success">
+					Success
+				</Button>
+				<Button shape="ghost" color="warning">
+					Warning
+				</Button>
+				<Button shape="ghost" color="danger">
+					Danger
+				</Button>
+				<Button shape="ghost" color="info">
+					Info
+				</Button>
+				<Button shape="ghost" color="light">
+					Light
+				</Button>
+				<Button shape="ghost" color="dark">
+					Dark
+				</Button>
+			</div>
+		</PaddedDiv>
+		<PaddedDiv>
+			<h2>Outline</h2>
+			<div className="btn-list">
+				<Button shape="outline" color="primary">
+					Primary
+				</Button>
+				<Button shape="outline" color="secondary">
+					Secondary
+				</Button>
+				<Button shape="outline" color="success">
+					Success
+				</Button>
+				<Button shape="outline" color="warning">
+					Warning
+				</Button>
+				<Button shape="outline" color="danger">
+					Danger
+				</Button>
+				<Button shape="outline" color="info">
+					Info
+				</Button>
+				<Button shape="outline" color="light">
+					Light
+				</Button>
+				<Button shape="outline" color="dark">
+					Dark
+				</Button>
+			</div>
+		</PaddedDiv>
+		<PaddedDiv>
+			<h2>Square</h2>
+			<div className="btn-list">
+				<Button shape="square" color="primary">
+					Primary
+				</Button>
+				<Button shape="square" color="secondary">
+					Secondary
+				</Button>
+				<Button shape="square" color="success">
+					Success
+				</Button>
+				<Button shape="square" color="warning">
+					Warning
+				</Button>
+				<Button shape="square" color="danger">
+					Danger
+				</Button>
+				<Button shape="square" color="info">
+					Info
+				</Button>
+				<Button shape="square" color="light">
+					Light
+				</Button>
+				<Button shape="square" color="dark">
+					Dark
+				</Button>
+			</div>
+		</PaddedDiv>
+		<PaddedDiv>
+			<h2>Pill</h2>
+			<div className="btn-list">
+				<Button shape="pill" color="primary">
+					Primary
+				</Button>
+				<Button shape="pill" color="secondary">
+					Secondary
+				</Button>
+				<Button shape="pill" color="success">
+					Success
+				</Button>
+				<Button shape="pill" color="warning">
+					Warning
+				</Button>
+				<Button shape="pill" color="danger">
+					Danger
+				</Button>
+				<Button shape="pill" color="info">
+					Info
+				</Button>
+				<Button shape="pill" color="light">
+					Light
+				</Button>
+				<Button shape="pill" color="dark">
+					Dark
+				</Button>
+			</div>
+		</PaddedDiv>
+		<PaddedDiv>
+			<h2>Colors</h2>
+			<div className="btn-list">
+				<Button color="blue">Blue</Button>
+				<Button color="azure">Azure</Button>
+				<Button color="indigo">Indigo</Button>
+				<Button color="purple">Purple</Button>
+				<Button color="pink">Pink</Button>
+				<Button color="red">Red</Button>
+				<Button color="orange">Orange</Button>
+				<Button color="yellow">Yellow</Button>
+				<Button color="lime">Lime</Button>
+				<Button color="green">Green</Button>
+				<Button color="teal">Teal</Button>
+				<Button color="cyan">Cyan</Button>
+			</div>
+		</PaddedDiv>
+		<PaddedDiv>
+			<h2>Sizes</h2>
+			<div className="btn-list">
+				<Button color="primary" size="small">
+					Small
+				</Button>
+				<Button color="primary">Normal</Button>
+				<Button color="primary" size="large">
+					Large
+				</Button>
+			</div>
+		</PaddedDiv>
+		<PaddedDiv>
+			<h2>Social</h2>
+			<div className="btn-list">
+				<Button color="facebook">Facebook</Button>
+				<Button color="twitter">Twitter</Button>
+				<Button color="google">Google</Button>
+				<Button color="youtube">Youtube</Button>
+				<Button color="vimeo">Vimeo</Button>
+				<Button color="dribble">Dribble</Button>
+				<Button color="github">Github</Button>
+				<Button color="instagram">Instagram</Button>
+				<Button color="pinterest">Pinterest</Button>
+				<Button color="vk">VK</Button>
+				<Button color="rss">RSS</Button>
+				<Button color="flickr">Flickr</Button>
+				<Button color="bitbucket">Bitbucket</Button>
+				<Button color="tabler">Tabler</Button>
+			</div>
+		</PaddedDiv>
 	</>
 );
 
-const Light = () => (
-	<ThemeProvider theme={LightTheme}>
-		<TablerStyles />
-		{Examples}
-	</ThemeProvider>
-);
+const render = (dark = false) => {
+	return (
+		<div className={dark ? "theme-dark page" : "page"}>
+			<TablerStyles />
+			{Examples}
+		</div>
+	);
+};
 
-const Dark = () => (
-	<ThemeProvider theme={DarkTheme}>
-		<TablerStyles />
-		{Examples}
-	</ThemeProvider>
-);
+const Light = () => render();
+const Dark = () => render(true);
 
 export default Story;
 export { Light, Dark };
