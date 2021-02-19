@@ -2,11 +2,12 @@ import React from "react";
 
 import styled from "styled-components";
 
+import ButtonList from "../ButtonList/ButtonList";
 import { TablerStyles } from "../Theme";
 import Button from "./Button";
 
 const PaddedDiv = styled.div`
-	padding: 18px 0 0 18px;
+	padding: 18px;
 `;
 
 const Story = {
@@ -17,7 +18,7 @@ const Examples = (
 	<>
 		<PaddedDiv>
 			<h1>Button</h1>
-			<div className="btn-list">
+			<ButtonList>
 				<Button color="primary">Primary</Button>
 				<Button color="secondary">Secondary</Button>
 				<Button color="success">Success</Button>
@@ -26,11 +27,11 @@ const Examples = (
 				<Button color="info">Info</Button>
 				<Button color="light">Light</Button>
 				<Button color="dark">Dark</Button>
-			</div>
+			</ButtonList>
 		</PaddedDiv>
 		<PaddedDiv>
 			<h2>Disabled</h2>
-			<div className="btn-list">
+			<ButtonList>
 				<Button disabled color="primary">
 					Primary
 				</Button>
@@ -55,11 +56,11 @@ const Examples = (
 				<Button disabled color="dark">
 					Dark
 				</Button>
-			</div>
+			</ButtonList>
 		</PaddedDiv>
 		<PaddedDiv>
 			<h2>Loading</h2>
-			<div className="btn-list">
+			<ButtonList>
 				<Button loading color="primary">
 					Primary
 				</Button>
@@ -84,11 +85,11 @@ const Examples = (
 				<Button loading color="dark">
 					Dark
 				</Button>
-			</div>
+			</ButtonList>
 		</PaddedDiv>
 		<PaddedDiv>
 			<h2>Ghost</h2>
-			<div className="btn-list">
+			<ButtonList>
 				<Button shape="ghost" color="primary">
 					Primary
 				</Button>
@@ -113,11 +114,11 @@ const Examples = (
 				<Button shape="ghost" color="dark">
 					Dark
 				</Button>
-			</div>
+			</ButtonList>
 		</PaddedDiv>
 		<PaddedDiv>
 			<h2>Outline</h2>
-			<div className="btn-list">
+			<ButtonList>
 				<Button shape="outline" color="primary">
 					Primary
 				</Button>
@@ -142,11 +143,11 @@ const Examples = (
 				<Button shape="outline" color="dark">
 					Dark
 				</Button>
-			</div>
+			</ButtonList>
 		</PaddedDiv>
 		<PaddedDiv>
 			<h2>Square</h2>
-			<div className="btn-list">
+			<ButtonList>
 				<Button shape="square" color="primary">
 					Primary
 				</Button>
@@ -171,11 +172,11 @@ const Examples = (
 				<Button shape="square" color="dark">
 					Dark
 				</Button>
-			</div>
+			</ButtonList>
 		</PaddedDiv>
 		<PaddedDiv>
 			<h2>Pill</h2>
-			<div className="btn-list">
+			<ButtonList>
 				<Button shape="pill" color="primary">
 					Primary
 				</Button>
@@ -200,11 +201,11 @@ const Examples = (
 				<Button shape="pill" color="dark">
 					Dark
 				</Button>
-			</div>
+			</ButtonList>
 		</PaddedDiv>
 		<PaddedDiv>
 			<h2>Colors</h2>
-			<div className="btn-list">
+			<ButtonList>
 				<Button color="blue">Blue</Button>
 				<Button color="azure">Azure</Button>
 				<Button color="indigo">Indigo</Button>
@@ -217,23 +218,23 @@ const Examples = (
 				<Button color="green">Green</Button>
 				<Button color="teal">Teal</Button>
 				<Button color="cyan">Cyan</Button>
-			</div>
+			</ButtonList>
 		</PaddedDiv>
 		<PaddedDiv>
 			<h2>Sizes</h2>
-			<div className="btn-list">
-				<Button color="primary" size="small">
+			<ButtonList>
+				<Button color="primary" size="sm">
 					Small
 				</Button>
 				<Button color="primary">Normal</Button>
-				<Button color="primary" size="large">
+				<Button color="primary" size="lg">
 					Large
 				</Button>
-			</div>
+			</ButtonList>
 		</PaddedDiv>
 		<PaddedDiv>
 			<h2>Social</h2>
-			<div className="btn-list">
+			<ButtonList>
 				<Button color="facebook">Facebook</Button>
 				<Button color="twitter">Twitter</Button>
 				<Button color="google">Google</Button>
@@ -248,7 +249,7 @@ const Examples = (
 				<Button color="flickr">Flickr</Button>
 				<Button color="bitbucket">Bitbucket</Button>
 				<Button color="tabler">Tabler</Button>
-			</div>
+			</ButtonList>
 		</PaddedDiv>
 	</>
 );

@@ -6,7 +6,7 @@ interface ButtonProps {
 	disabled?: boolean;
 	loading?: boolean;
 	shape?: "ghost" | "square" | "pill" | "outline" | "icon";
-	size?: "small" | "large";
+	size?: "sm" | "lg";
 }
 const Button: React.FC<ButtonProps> = ({
 	children,
@@ -18,29 +18,18 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
 	const classes = ["btn"];
 	let modifier = "";
-	if (shape) {
-		switch (shape) {
-			case "ghost":
-				modifier = "-ghost";
-				break;
-			case "outline":
-				modifier = "-outline";
-				break;
-			default:
-				classes.push(`btn-${shape}`);
-		}
-	}
+
+	shape === "ghost" && (modifier = "-ghost");
+	shape === "outline" && (modifier = "-outline");
+	shape &&
+		["ghost", "outline"].indexOf(shape) === -1 &&
+		classes.push(`btn-${shape}`);
 
 	color && classes.push(`btn${modifier}-${color}`);
 	modifier && classes.push(`btn${modifier}`);
 	disabled && classes.push("disabled");
 	loading && classes.push("btn-loading");
-
-	if (size === "small") {
-		classes.push("btn-sm");
-	} else if (size === "large") {
-		classes.push("btn-lg");
-	}
+	size && classes.push("btn-" + size);
 
 	return (
 		<button className={classes.join(" ")} aria-label="Button">
