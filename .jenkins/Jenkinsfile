@@ -26,9 +26,11 @@ pipeline {
 				}
 			}
 			steps {
-				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn storybook:export'
-				sh 'tar -czvf storybook-static.tgz storybook-static'
-				archiveArtifacts(artifacts: 'storybook-static.tgz', allowEmptyArchive: false)
+				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn docs:build'
+				dir(path: 'example/public') {
+					sh 'tar -czvf styleguide.tgz documentation'
+					archiveArtifacts(artifacts: 'styleguide.tgz', allowEmptyArchive: false)
+				}
 			}
 		}
 		stage('Docs Deploy') {
@@ -50,18 +52,16 @@ pipeline {
 						-v \$(pwd):/app \\
 						-w /app \\
 						jc21/ci-tools \\
-						scripts/docs-upload /app/storybook-static/
+						scripts/docs-upload /app/example/public/documentation/
 					"""
 
-					/*
 					sh """docker run --rm \\
 						--name trts-docs-invalidate \\
 						-e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \\
 						-e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \\
 						jc21/ci-tools \\
-						aws cloudfront create-invalidation --distribution-id E2Z0128EHS0Q23 --paths '/*'
+						aws cloudfront create-invalidation --distribution-id E2ZSVEDKVBPE1N --paths '/*'
 					"""
-					*/
 				}
 			}
 		}

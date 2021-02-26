@@ -2,8 +2,8 @@ import React from "react";
 
 import styled from "styled-components";
 
+import { TablerStyles } from "../../Theme";
 import Avatar from "../Avatar/Avatar";
-import { TablerStyles } from "../Theme";
 import AvatarList from "./AvatarList";
 
 const PaddedDiv = styled.div`

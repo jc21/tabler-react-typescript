@@ -1,0 +1,6 @@
+**[Demo](https://tabler.github.io/tabler-react-typescript/)** |
+**[Issues](https://github.com/jc21/tabler-react-typescript/issues)**
+
+## Install
+
+`yarn add tabler-react-typescript`

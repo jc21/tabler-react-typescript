@@ -2,7 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 
-import { TablerStyles } from "../Theme";
+import { TablerStyles } from "../../Theme";
 import Badge from "./Badge";
 
 const PaddedDiv = styled.div`

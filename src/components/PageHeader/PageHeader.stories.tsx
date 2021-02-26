@@ -2,9 +2,9 @@ import React from "react";
 
 import styled from "styled-components";
 
+import { TablerStyles } from "../../Theme";
 import Button from "../Button/Button";
 import ButtonList from "../ButtonList/ButtonList";
-import { TablerStyles } from "../Theme";
 import PageHeader from "./PageHeader";
 
 const PaddedDiv = styled.div`
