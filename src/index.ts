@@ -1,4 +1,4 @@
-import Alert from "./components/Alert";
+import { Alert } from "./components/Alert";
 import Avatar from "./components/Avatar";
 import AvatarList from "./components/AvatarList";
 import Badge from "./components/Badge";

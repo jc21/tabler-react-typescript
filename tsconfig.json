@@ -27,8 +27,8 @@
   "exclude": [
     "build",
     "node_modules",
-    "storybook-static",
-    "src/**/*.stories.tsx",
+    "docz",
+    "src/**/*.mdx",
     "src/**/*.test.tsx"
   ]
 }

@@ -1,4 +1,5 @@
 node_modules/
 build/
 *.code-workspace
-example/public/documentation
+example/public/docz
+.docz

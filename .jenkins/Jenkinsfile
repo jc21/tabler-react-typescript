@@ -26,10 +26,10 @@ pipeline {
 				}
 			}
 			steps {
-				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn docs:build'
+				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn docz:build'
 				dir(path: 'example/public') {
-					sh 'tar -czvf styleguide.tgz documentation'
-					archiveArtifacts(artifacts: 'styleguide.tgz', allowEmptyArchive: false)
+					sh 'tar -czvf docz.tgz docz'
+					archiveArtifacts(artifacts: 'docz.tgz', allowEmptyArchive: false)
 				}
 			}
 		}
@@ -52,7 +52,7 @@ pipeline {
 						-v \$(pwd):/app \\
 						-w /app \\
 						jc21/ci-tools \\
-						scripts/docs-upload /app/example/public/documentation/
+						scripts/docs-upload /app/example/public/docz/
 					"""
 
 					sh """docker run --rm \\

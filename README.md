@@ -1,7 +1,8 @@
 # Tabler React - Typescript Version
 
-> React implementation of [Tabler UI](https://tabler.io/).
-> Loosely based on [tabler-react](https://github.com/tabler/tabler-react/) which is no longer developed.
+> React implementation of [Tabler UI](https://tabler.io/). Loosely based on
+> [tabler-react](https://github.com/tabler/tabler-react/) which is no longer
+> developed.
 
 [![npm](https://img.shields.io/npm/v/tabler-react-typescript.svg?style=for-the-badge)](https://www.npmjs.com/package/tabler-react-typescript)
 [![npm (types)](https://img.shields.io/npm/types/tabler-react-typescript.svg?style=for-the-badge)](https://www.npmjs.com/package/tabler-react-typescript)
@@ -19,7 +20,8 @@ npm install --save tabler-react-typescript
 git clone https://github.com/jc21/tabler-react-typescript.git
 ```
 
-This project used [this react library template](https://github.com/HarveyD/react-component-library).
+This project used
+[this react library template](https://github.com/HarveyD/react-component-library).
 
 ### Testing
 
@@ -31,20 +33,6 @@ yarn test
 
 ```bash
 yarn build
-```
-
-### Storybook
-
-To run a live-reload Storybook server on your local machine:
-
-```bash
-yarn storybook
-```
-
-To export your Storybook as static files:
-
-```bash
-yarn storybook:export
 ```
 
 ### Generating New Components
@@ -67,8 +55,10 @@ This will generate:
 
 The default templates for each file can be modified under `util/templates`.
 
-Don't forget to add the component to your `index.ts` exports if you want the library to export the component!
+Don't forget to add the component to your `index.ts` exports if you want the
+library to export the component!
 
 ## License
 
-MIT © [jc21](https://github.com/jc21) and [codecalm](https://github.com/codecalm)
+MIT © [jc21](https://github.com/jc21) and
+[codecalm](https://github.com/codecalm)

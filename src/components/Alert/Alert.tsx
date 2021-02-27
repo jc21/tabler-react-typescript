@@ -1,14 +1,30 @@
 import React, { ReactNode, useState } from "react";
 
-interface AlertProps {
+import cn from "classnames";
+
+import { AlertLink } from "./AlertLink";
+
+// TODO: avatar support
+
+declare global {
+	interface Function {
+		Link: React.FC;
+	}
+}
+
+export interface AlertProps {
 	/**
 	 * Child elements inside the Alert
 	 */
 	children?: ReactNode;
 	/**
+	 * Additional Class
+	 */
+	className?: string;
+	/**
 	 * The type of this Alert, changes it's color
 	 */
-	type: "info" | "success" | "warning" | "danger";
+	type?: "info" | "success" | "warning" | "danger";
 	/**
 	 * An Icon to be displayed on the right hand side of the Alert
 	 */
@@ -20,31 +36,32 @@ interface AlertProps {
 	/**
 	 *
 	 */
-	important: boolean;
+	important?: boolean;
 	/**
 	 * Adds an 'X' to the right side of the Alert that dismisses the Alert
 	 */
-	dismissable: boolean;
+	dismissable?: boolean;
 	/**
 	 * Event to call after dissmissing
 	 */
 	onDismissClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
-function Alert({
+export const Alert: React.FC<AlertProps> = ({
 	children,
+	className,
 	type = "info",
 	icon,
 	avatar,
 	important = false,
 	dismissable = false,
 	onDismissClick,
-}: AlertProps) {
+}) => {
 	const [dismissed, setDismissed] = useState(false);
-	const classes = ["alert", "alert-" + type];
 
-	// Yes, this is a typo from the tabler css
-	dismissable && classes.push("alert-dismissible");
-	important && classes.push("alert-important");
+	const classes = {
+		"alert-dismissible": dismissable,
+		"alert-important": important,
+	};
 
 	const handleDismissed = (
 		e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
@@ -69,7 +86,9 @@ function Alert({
 
 	if (!dismissed) {
 		return (
-			<div className={classes.join(" ")} role="alert">
+			<div
+				className={cn("alert", `alert-${type}`, classes, className)}
+				role="alert">
 				{wrapIfIcon()}
 				{dismissable ? (
 					<button
@@ -83,7 +102,6 @@ function Alert({
 		);
 	}
 	return null;
-}
+};
 
-export default Alert;
-export { AlertProps };
+Alert.Link = AlertLink;

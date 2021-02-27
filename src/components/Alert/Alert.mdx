@@ -1,0 +1,86 @@
+---
+name: Alert
+route: /components/Alert
+---
+
+import { Playground, Props } from "docz";
+import { Alert } from "./Alert.tsx";
+import { Check } from "tabler-icons-react";
+
+# Alert
+
+## Properties
+
+<Props of={Alert} />
+
+## Usage
+
+<Playground>
+	<Alert type="success">
+		<h4 className="alert-title">Wow! Everything worked!</h4>
+		<div className="text-muted">Your account has been saved!</div>
+	</Alert>
+	<Alert type="info">
+		<h4 className="alert-title">Did you know?</h4>
+		<div className="text-muted">
+			Here is something that you might like to know.
+		</div>
+	</Alert>
+	<Alert type="warning">
+		<h4 className="alert-title">Uh oh, something went wrong</h4>
+		<div className="text-muted">
+			Sorry! There was a problem with your request.
+		</div>
+	</Alert>
+	<Alert type="danger">
+		<h4 className="alert-title">I'm so sorry&hellip;</h4>
+		<div className="text-muted">
+			Your account has been deleted and can't be restored.
+		</div>
+	</Alert>
+</Playground>
+
+## Dismissable Alerts
+
+<Playground>
+	<Alert type="success" dismissable>
+		<h4 className="alert-title">Wow! Everything worked!</h4>
+		<div className="text-muted">Your account has been saved!</div>
+	</Alert>
+</Playground>
+
+## Important Alerts
+
+<Playground>
+	<Alert type="success" important>
+		<h4 className="alert-title">Wow! Everything worked!</h4>
+		<div className="text-muted">Your account has been saved!</div>
+	</Alert>
+	<Alert type="info" important>
+		<h4 className="alert-title">Did you know?</h4>
+		<div className="text-muted">
+			Here is something that you might like to know.
+		</div>
+	</Alert>
+	<Alert type="warning" important>
+		<h4 className="alert-title">Uh oh, something went wrong</h4>
+		<div className="text-muted">
+			Sorry! There was a problem with your request.
+		</div>
+	</Alert>
+	<Alert type="danger" important>
+		<h4 className="alert-title">I'm so sorry&hellip;</h4>
+		<div className="text-muted">
+			Your account has been deleted and can't be restored.
+		</div>
+	</Alert>
+</Playground>
+
+## Alert with Icon
+
+<Playground>
+	<Alert type="success" icon={<Check size={32} color="green" />}>
+		<h4 className="alert-title">Wow! Everything worked!</h4>
+		<div className="text-muted">Your account has been saved!</div>
+	</Alert>
+</Playground>

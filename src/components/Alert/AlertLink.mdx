@@ -1,0 +1,22 @@
+---
+name: Alert.Link
+route: /components/Alert.Link
+---
+
+import { Playground, Props } from "docz";
+import { Alert } from "./Alert.tsx";
+import { Check } from "tabler-icons-react";
+
+# Alert
+
+## Properties
+
+<Props of={Alert.Link} />
+
+## Usage
+
+<Playground>
+	<Alert type="success">
+		<a>A normal link</a> <Alert.Link>An Alert.Link</Alert.Link>
+	</Alert>
+</Playground>

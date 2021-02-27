@@ -1,0 +1,7 @@
+{
+	"typescript": true,
+	"host": "0.0.0.0",
+	"files": "**/*.mdx",
+	"dest": "example/public/docz",
+	"title": "Tabler React Typescript Docz"
+}
