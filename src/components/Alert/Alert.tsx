@@ -4,8 +4,6 @@ import cn from "classnames";
 
 import { AlertLink } from "./AlertLink";
 
-// TODO: avatar support
-
 declare global {
 	interface Function {
 		Link: React.FC;
@@ -26,13 +24,17 @@ export interface AlertProps {
 	 */
 	type?: "info" | "success" | "warning" | "danger";
 	/**
+	 * Alert Title
+	 */
+	title?: string;
+	/**
 	 * An Icon to be displayed on the right hand side of the Alert
 	 */
 	icon?: ReactNode;
 	/**
 	 * Display an Avatar on the left hand side of this Alert
 	 */
-	avatar?: string;
+	avatar?: ReactNode;
 	/**
 	 *
 	 */
@@ -50,6 +52,7 @@ export const Alert: React.FC<AlertProps> = ({
 	children,
 	className,
 	type = "info",
+	title,
 	icon,
 	avatar,
 	important = false,
@@ -70,18 +73,31 @@ export const Alert: React.FC<AlertProps> = ({
 		onDismissClick && onDismissClick(e);
 	};
 
+	const wrappedTitle = title ? <h4 className="alert-title">{title}</h4> : null;
+	const wrappedChildren = children && !important ? <div className="text-muted">{children}</div> : children;
+
 	const wrapIfIcon = (): ReactNode => {
+		if (avatar) {
+			return (
+				<div className="d-flex">
+					<div>
+						<span className="float-start me-3">{avatar}</span>
+					</div>
+					<div>{wrappedChildren}</div>
+				</div>
+			);
+		}
 		if (icon) {
 			return (
 				<div className="d-flex">
 					<div>
 						<span className="alert-icon">{icon}</span>
 					</div>
-					<div>{children}</div>
+					<div>{wrappedTitle}{wrappedChildren}</div>
 				</div>
 			);
 		}
-		return children;
+		return <>{wrappedTitle}{wrappedChildren}</>;
 	};
 
 	if (!dismissed) {

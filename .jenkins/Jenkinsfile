@@ -85,7 +85,7 @@ pipeline {
 		}
 		always {
 			// Fix file ownership
-			sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim chown -R $(id -u):$(id -g) *'
+			sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim chown -R $(id -u):$(id -g) * .docz'
 		}
 	}
 }

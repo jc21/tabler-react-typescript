@@ -5,18 +5,26 @@ route: /components/Alert.Link
 
 import { Playground, Props } from "docz";
 import { Alert } from "./Alert.tsx";
-import { Check } from "tabler-icons-react";
 
-# Alert
-
-## Properties
-
-<Props of={Alert.Link} />
+# Alert.Link
 
 ## Usage
 
 <Playground>
 	<Alert type="success">
-		<a>A normal link</a> <Alert.Link>An Alert.Link</Alert.Link>
+		This is a success alert — <Alert.Link>check it out</Alert.Link>!
+	</Alert>
+	<Alert type="info">
+		This is a info alert — <Alert.Link>check it out</Alert.Link>!
+	</Alert>
+	<Alert type="warning">
+		This is a warning alert — <Alert.Link>check it out</Alert.Link>!
+	</Alert>
+	<Alert type="danger">
+		This is a danger alert — <Alert.Link>check it out</Alert.Link>!
 	</Alert>
 </Playground>
+
+## Properties
+
+<Props of={Alert.Link} />

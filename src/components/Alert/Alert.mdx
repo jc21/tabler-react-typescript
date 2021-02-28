@@ -5,82 +5,224 @@ route: /components/Alert
 
 import { Playground, Props } from "docz";
 import { Alert } from "./Alert.tsx";
-import { Check } from "tabler-icons-react";
+import {
+	Check,
+	InfoCircle,
+	AlertTriangle,
+	AlertCircle,
+} from "tabler-icons-react";
 
 # Alert
-
-## Properties
-
-<Props of={Alert} />
 
 ## Usage
 
 <Playground>
-	<Alert type="success">
-		<h4 className="alert-title">Wow! Everything worked!</h4>
-		<div className="text-muted">Your account has been saved!</div>
+	<Alert type="success" title="Wow! Everything worked!">
+		Your account has been saved!
 	</Alert>
-	<Alert type="info">
-		<h4 className="alert-title">Did you know?</h4>
-		<div className="text-muted">
-			Here is something that you might like to know.
-		</div>
+	<Alert type="info" title="Did you know?">
+		Here is something that you might like to know.
 	</Alert>
-	<Alert type="warning">
-		<h4 className="alert-title">Uh oh, something went wrong</h4>
-		<div className="text-muted">
-			Sorry! There was a problem with your request.
-		</div>
+	<Alert type="warning" title="Uh oh, something went wrong">
+		Sorry! There was a problem with your request.
 	</Alert>
-	<Alert type="danger">
-		<h4 className="alert-title">I'm so sorry&hellip;</h4>
-		<div className="text-muted">
-			Your account has been deleted and can't be restored.
-		</div>
+	<Alert type="danger" title="I'm so sorry">
+		Your account has been deleted and can't be restored.
 	</Alert>
 </Playground>
 
-## Dismissable Alerts
+## Dismissable
 
 <Playground>
-	<Alert type="success" dismissable>
-		<h4 className="alert-title">Wow! Everything worked!</h4>
-		<div className="text-muted">Your account has been saved!</div>
+	<Alert type="success" title="Wow! Everything worked!" dismissable>
+		Your account has been saved!
+	</Alert>
+	<Alert type="info" title="Did you know?" dismissable>
+		Here is something that you might like to know.
+	</Alert>
+	<Alert type="warning" title="Uh oh, something went wrong" dismissable>
+		Sorry! There was a problem with your request.
+	</Alert>
+	<Alert type="danger" title="I'm so sorry" dismissable>
+		Your account has been deleted and can't be restored.
 	</Alert>
 </Playground>
 
-## Important Alerts
+## Important
 
 <Playground>
-	<Alert type="success" important>
-		<h4 className="alert-title">Wow! Everything worked!</h4>
-		<div className="text-muted">Your account has been saved!</div>
+	<Alert
+		type="success"
+		icon={<Check size={32} color="white" />}
+		important
+		dismissable>
+		Your account has been saved!
 	</Alert>
-	<Alert type="info" important>
-		<h4 className="alert-title">Did you know?</h4>
-		<div className="text-muted">
-			Here is something that you might like to know.
-		</div>
+	<Alert
+		type="info"
+		icon={<InfoCircle size={32} color="white" />}
+		important
+		dismissable>
+		Here is something that you might like to know.
 	</Alert>
-	<Alert type="warning" important>
-		<h4 className="alert-title">Uh oh, something went wrong</h4>
-		<div className="text-muted">
-			Sorry! There was a problem with your request.
-		</div>
+	<Alert
+		type="warning"
+		icon={<AlertTriangle size={32} color="white" />}
+		important
+		dismissable>
+		Sorry! There was a problem with your request.
 	</Alert>
-	<Alert type="danger" important>
-		<h4 className="alert-title">I'm so sorry&hellip;</h4>
-		<div className="text-muted">
-			Your account has been deleted and can't be restored.
-		</div>
+	<Alert
+		type="danger"
+		icon={<AlertCircle size={32} color="white" />}
+		important
+		dismissable>
+		Your account has been deleted and can't be restored.
 	</Alert>
 </Playground>
 
-## Alert with Icon
+## With Icons
 
 <Playground>
-	<Alert type="success" icon={<Check size={32} color="green" />}>
-		<h4 className="alert-title">Wow! Everything worked!</h4>
-		<div className="text-muted">Your account has been saved!</div>
+	<Alert
+		type="success"
+		title="Wow! Everything worked!"
+		icon={<Check size={32} color="green" />}>
+		Your account has been saved!
+	</Alert>
+	<Alert
+		type="info"
+		title="Did you know?"
+		icon={<InfoCircle size={32} color="blue" />}>
+		Here is something that you might like to know.
+	</Alert>
+	<Alert
+		type="warning"
+		title="Uh oh, something went wrong"
+		icon={<AlertTriangle size={32} color="orange" />}>
+		Sorry! There was a problem with your request.
+	</Alert>
+	<Alert
+		type="danger"
+		title="I'm so sorry"
+		icon={<AlertCircle size={32} color="red" />}>
+		Your account has been deleted and can't be restored.
 	</Alert>
 </Playground>
+
+## With Avatars
+
+<Playground>
+	<Alert
+		type="success"
+		avatar={
+			<span
+				className="avatar"
+				style={{
+					backgroundImage:
+						"url(https://tabler-react-typescript.jc21.com/assets/000m.jpg)",
+				}}></span>
+		}>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+		dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit
+		amet, consectetur adipisicing elit.
+	</Alert>
+	<Alert type="info" avatar={<span className="avatar">JL</span>}>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+		dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit
+		amet, consectetur adipisicing elit.
+	</Alert>
+	<Alert
+		type="warning"
+		avatar={
+			<span
+				className="avatar"
+				style={{
+					backgroundImage:
+						"url(https://tabler-react-typescript.jc21.com/assets/002m.jpg)",
+				}}></span>
+		}>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+		dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit
+		amet, consectetur adipisicing elit.
+	</Alert>
+	<Alert
+		type="danger"
+		avatar={
+			<span
+				className="avatar"
+				style={{
+					backgroundImage:
+						"url(https://tabler-react-typescript.jc21.com/assets/003m.jpg)",
+				}}></span>
+		}>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+		dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit
+		amet, consectetur adipisicing elit.
+	</Alert>
+</Playground>
+
+## With Buttons
+
+<Playground>
+	<Alert type="success" title="Some Title">
+		<p>
+			Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id
+			dolore minim voluptate.
+		</p>
+		<div className="btn-list">
+			<a href="#" className="btn btn-success">
+				Okay
+			</a>
+			<a href="#" className="btn">
+				Cancel
+			</a>
+		</div>
+	</Alert>
+	<Alert type="info" title="Some Title">
+		<p>
+			Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id
+			dolore minim voluptate.
+		</p>
+		<div className="btn-list">
+			<a href="#" className="btn btn-info">
+				Okay
+			</a>
+			<a href="#" className="btn">
+				Cancel
+			</a>
+		</div>
+	</Alert>
+	<Alert type="warning" title="Some Title">
+		<p>
+			Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id
+			dolore minim voluptate.
+		</p>
+		<div className="btn-list">
+			<a href="#" className="btn btn-warning">
+				Okay
+			</a>
+			<a href="#" className="btn">
+				Cancel
+			</a>
+		</div>
+	</Alert>
+	<Alert type="danger" title="Some Title">
+		<p>
+			Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id
+			dolore minim voluptate.
+		</p>
+		<div className="btn-list">
+			<a href="#" className="btn btn-danger">
+				Okay
+			</a>
+			<a href="#" className="btn">
+				Cancel
+			</a>
+		</div>
+	</Alert>
+</Playground>
+
+## Properties
+
+<Props of={Alert} />
