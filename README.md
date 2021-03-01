@@ -4,9 +4,20 @@
 > [tabler-react](https://github.com/tabler/tabler-react/) which is no longer
 > developed.
 
-[![npm](https://img.shields.io/npm/v/tabler-react-typescript.svg?style=for-the-badge)](https://www.npmjs.com/package/tabler-react-typescript)
-[![npm (types)](https://img.shields.io/npm/types/tabler-react-typescript.svg?style=for-the-badge)](https://www.npmjs.com/package/tabler-react-typescript)
-[![npm (licence)](https://img.shields.io/npm/l/tabler-react-typescript.svg?style=for-the-badge)](https://www.npmjs.com/package/tabler-react-typescript)
+<p>
+  <a href="https://tabler-react-typescript.jc21.com?utm_source=github">
+    <img src="https://img.shields.io/badge/documentation-blue.svg?style=for-the-badge">
+  </a>
+  <a href="https://www.npmjs.com/package/tabler-react-typescript">
+    <img src="https://img.shields.io/npm/v/tabler-react-typescript.svg?style=for-the-badge">
+  </a>
+  <a href="https://www.npmjs.com/package/tabler-react-typescript">
+    <img src="https://img.shields.io/npm/types/tabler-react-typescript.svg?style=for-the-badge">
+  </a>
+  <a href="https://ci.nginxproxymanager.com/blue/organizations/jenkins/tabler-react-typescript/branches/">
+    <img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fci.nginxproxymanager.com%2Fjob%2Ftabler-react-typescript%2Fjob%2Fmaster&style=for-the-badge">
+  </a>
+</p>
 
 ## Install
 
