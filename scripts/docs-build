@@ -1,0 +1,25 @@
+#!/bin/bash -x
+
+# Note: This script is designed to be run inside CI builds
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+. "$DIR/.common.sh"
+
+cd "$DIR/.."
+yarn install
+
+echo -e "${BLUE}❯ ${CYAN}Building example${RESET}"
+
+cd "$DIR/../example"
+yarn install
+set -e
+yarn install
+yarn build
+
+echo -e "${BLUE}❯ ${CYAN}Building docz${RESET}"
+cd "$DIR/.."
+yarn docs:build
+
+echo -e "${BLUE}❯ ${GREEN}Building Complete${RESET}"
+
+exit 0

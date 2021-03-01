@@ -14,9 +14,9 @@
 		"test:watch": "jest --watch",
 		"lint": "yarn jest --config jest.eslint.js --watch",
 		"lint:ci": "yarn lint --watchAll=false",
-		"docz:dev": "docz dev",
-		"docz:build": "docz build",
-		"docz:serve": "docz build && docz serve"
+		"docs:dev": "docz dev",
+		"docs:build": "docz build",
+		"docs:serve": "docz build && docz serve"
 	},
 	"repository": {
 		"type": "git",
@@ -75,6 +75,7 @@
 		"react-docgen-typescript": "^1.21.0",
 		"react-dom": "^17.0.1",
 		"react-helmet": "^6.1.0",
+		"react-scripts": "^4.0.3",
 		"rollup": "^2.40.0",
 		"rollup-plugin-copy": "^3.4.0",
 		"rollup-plugin-peer-deps-external": "^2.2.4",

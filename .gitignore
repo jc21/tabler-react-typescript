@@ -1,5 +1,5 @@
 node_modules/
 lib/
 *.code-workspace
-example/public/docz
+example/public/documentation
 .docz

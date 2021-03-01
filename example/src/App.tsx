@@ -1,10 +1,21 @@
-import React from 'react'
+import React from "react";
 
-import { ExampleComponent } from 'create-react-library-example'
-import 'create-react-library-example/dist/index.css'
+import { Alert } from "tabler-react-typescript-dev";
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+	return (
+		<div className="content">
+			<div className="container-xl">
+				<Alert type="info" title="Welcome to Tabler React Typescript">
+					This project is under construction. For now, please read the{" "}
+					<Alert.Link href="documentation/index.html">
+						component documentation
+					</Alert.Link>
+					.
+				</Alert>
+			</div>
+		</div>
+	);
+};
 
-export default App
+export default App;

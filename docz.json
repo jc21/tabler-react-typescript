@@ -1,9 +1,11 @@
 {
 	"typescript": true,
 	"host": "0.0.0.0",
-	"files": "src/**/*.mdx",
-	"dest": "example/public/docz",
-	"title": "Tabler React Typescript Docz",
+	"files": "**/*.mdx",
+	"dest": "example/build/documentation",
+	"src": "src",
+	"base": "/documentation/",
+	"title": "Tabler React Typescript",
 	"menu": ["Introduction"],
 	"themeConfig": {
 		"showPlaygroundEditor": false
