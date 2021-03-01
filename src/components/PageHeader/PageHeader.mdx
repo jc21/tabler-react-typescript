@@ -1,0 +1,58 @@
+---
+name: PageHeader
+route: /components/PageHeader
+---
+
+import { Playground, Props } from "docz";
+import { PageHeader } from "./PageHeader.tsx";
+import { Button } from "../Button/Button.tsx";
+import { ButtonList } from "../ButtonList/ButtonList.tsx";
+import { Breadcrumb } from "../Breadcrumb/Breadcrumb.tsx";
+
+# PageHeader
+
+## Usage
+
+<Playground>
+	<PageHeader
+		title="Example 1"
+		preTitle="Pre Title 1"
+		subTitle="Sub Title 1"
+	/>
+</Playground>
+
+## With Buttons
+
+<Playground>
+	<PageHeader title="Example 2" subTitle="Sub-title 2">
+		<ButtonList>
+			<Button color="primary">Edit</Button>
+			<Button color="teal">Subscribe</Button>
+		</ButtonList>
+	</PageHeader>
+</Playground>
+
+## With Breadcrumb
+
+<Playground>
+	<PageHeader
+		title="Example 3"
+		breadcrumb={
+			<Breadcrumb>
+				<Breadcrumb.Item>
+					<a href="/">Home</a>
+				</Breadcrumb.Item>
+				<Breadcrumb.Item>
+					<a href="/">Next</a>
+				</Breadcrumb.Item>
+				<Breadcrumb.Item active>
+					<a href="/">Here</a>
+				</Breadcrumb.Item>
+			</Breadcrumb>
+		}
+	/>
+</Playground>
+
+## Properties
+
+<Props of={PageHeader} />

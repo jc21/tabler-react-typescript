@@ -1,16 +1,21 @@
 import React, { ReactNode } from "react";
 
-interface AvatarListProps {
+import cn from "classnames";
+
+export interface AvatarListProps {
+	/**
+	 * Child elements within
+	 */
 	children?: ReactNode;
+	/**
+	 * Additional Class
+	 */
+	className?: string;
+	/**
+	 * Displays stacked avatars
+	 */
 	stacked?: boolean;
 }
-const AvatarList: React.FC<AvatarListProps> = ({ children, stacked }) => {
-	const classes = ["avatar-list"];
-
-	stacked && classes.push("avatar-list-stacked");
-
-	return <div className={classes.join(" ")}>{children}</div>;
+export const AvatarList: React.FC<AvatarListProps> = ({ children, className, stacked }) => {
+	return <div className={cn("avatar-list", stacked && "avatar-list-stacked", className)}>{children}</div>;
 };
-
-export default AvatarList;
-export { AvatarListProps };

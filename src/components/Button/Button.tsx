@@ -1,24 +1,53 @@
 import React, { ReactNode } from "react";
 
-interface ButtonProps {
+import cn from "classnames";
+
+export interface ButtonProps {
+	/**
+	 * Child elements within
+	 */
 	children?: ReactNode;
+	/**
+	 * Additional Class
+	 */
+	className?: string;
+	/**
+	 * Color of the Button
+	 */
 	color?: string;
+	/**
+	 * Disables the Button
+	 */
 	disabled?: boolean;
+	/**
+	 * Show a spinner instead of content
+	 */
 	loading?: boolean;
+	/**
+	 * Button shape
+	 */
 	shape?: "ghost" | "square" | "pill" | "outline" | "icon";
+	/**
+	 * Button size
+	 */
 	size?: "sm" | "lg";
 }
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
 	children,
+	className,
 	color,
 	disabled,
 	loading,
 	shape,
 	size,
 }) => {
-	const classes = ["btn"];
-	let modifier = "";
+	const classes = ["btn", {
+		"disabled": disabled,
+		"btn-loading": loading,
+		[`btn-${size}`]: !!size,
+	}];
 
+	let modifier = "";
 	shape === "ghost" && (modifier = "-ghost");
 	shape === "outline" && (modifier = "-outline");
 	shape &&
@@ -27,16 +56,10 @@ const Button: React.FC<ButtonProps> = ({
 
 	color && classes.push(`btn${modifier}-${color}`);
 	modifier && classes.push(`btn${modifier}`);
-	disabled && classes.push("disabled");
-	loading && classes.push("btn-loading");
-	size && classes.push("btn-" + size);
 
 	return (
-		<button className={classes.join(" ")} aria-label="Button">
+		<button className={cn(classes, className)} aria-label="Button">
 			{children}
 		</button>
 	);
 };
-
-export default Button;
-export { ButtonProps };

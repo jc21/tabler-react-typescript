@@ -1,0 +1,33 @@
+---
+name: Breadcrumb
+route: /components/Breadcrumb
+---
+
+import { Playground, Props } from "docz";
+import { Breadcrumb } from "./Breadcrumb.tsx";
+
+# Breadcrumb
+
+## Usage
+
+<Playground>
+	<Breadcrumb>
+		<Breadcrumb.Item>
+			<a href="/">Home</a>
+		</Breadcrumb.Item>
+		<Breadcrumb.Item>
+			<a href="/">Next</a>
+		</Breadcrumb.Item>
+		<Breadcrumb.Item active>
+			<a href="/">Here</a>
+		</Breadcrumb.Item>
+	</Breadcrumb>
+</Playground>
+
+## Properties
+
+<Props of={Breadcrumb} />
+
+## Item Properties
+
+<Props of={Breadcrumb.Item} />

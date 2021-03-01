@@ -1,0 +1,40 @@
+---
+name: AvatarList
+route: /components/AvatarList
+---
+
+import { Playground, Props } from "docz";
+import { AvatarList } from "./AvatarList.tsx";
+import { Avatar } from "../Avatar/Avatar.tsx";
+
+# AvatarList
+
+## Usage
+
+<Playground>
+	<AvatarList>
+		<Avatar initials="JC" /> <Avatar initials="BV" />
+		<Avatar initials="DH" /> <Avatar initials="RG" />
+		<Avatar initials="LR" /> <Avatar initials="MD" />
+		<Avatar initials="LR" color="pink-lt" />
+		<Avatar initials="MD" color="red-lt" />
+		<Avatar initials="JC" color="orange-lt" />
+	</AvatarList>
+</Playground>
+
+## Stacked
+
+<Playground>
+	<AvatarList stacked>
+		<Avatar initials="JC" /> <Avatar initials="BV" />
+		<Avatar initials="DH" /> <Avatar initials="RG" />
+		<Avatar initials="LR" /> <Avatar initials="MD" />
+		<Avatar initials="LR" color="pink-lt" />
+		<Avatar initials="MD" color="red-lt" />
+		<Avatar initials="JC" color="orange-lt" />
+	</AvatarList>
+</Playground>
+
+## Properties
+
+<Props of={AvatarList} />

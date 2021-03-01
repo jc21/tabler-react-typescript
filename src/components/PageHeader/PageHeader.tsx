@@ -1,24 +1,46 @@
 import React, { ReactNode } from "react";
 
-interface PageHeaderProps {
+import cn from "classnames";
+
+export interface PageHeaderProps {
+	/**
+	 * Child elements within
+	 */
 	children?: ReactNode;
-	breadcrumbs?: ReactNode;
+	/**
+	 * Additional Class
+	 */
+	className?: string;
+	/**
+	 * Breadcrumb element
+	 */
+	breadcrumb?: ReactNode;
+	/**
+	 * Page Title
+	 */
 	title: string;
+	/**
+	 * Pre Title
+	 */
 	preTitle?: string;
+	/**
+	 * Sub Title
+	 */
 	subTitle?: ReactNode;
 }
-const PageHeader: React.FC<PageHeaderProps> = ({
+export const PageHeader: React.FC<PageHeaderProps> = ({
 	children,
+	className,
 	preTitle,
 	title,
 	subTitle,
-	breadcrumbs,
+	breadcrumb,
 }) => {
 	return (
-		<div className="page-header">
+		<div className={cn("page-header", className)}>
 			<div className="row align-items-center">
 				<div className="col">
-					{breadcrumbs}
+					{breadcrumb}
 					{preTitle ? (
 						<div className="page-pretitle">{preTitle}</div>
 					) : null}
@@ -34,6 +56,3 @@ const PageHeader: React.FC<PageHeaderProps> = ({
 		</div>
 	);
 };
-
-export default PageHeader;
-export { PageHeaderProps };

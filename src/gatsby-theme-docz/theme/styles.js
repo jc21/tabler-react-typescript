@@ -18,4 +18,10 @@ styles.root["div[data-testid=\"live-editor\"]"] = {
 	fontSize: styles.root.fontSize,
 };
 
+styles.root["div[data-testid=\"main-container\"]"] = {
+	h2: {
+		marginTop: "40px"
+	}
+};
+
 export default styles;

@@ -1,15 +1,31 @@
 import React, { ReactNode } from "react";
 
-interface BreadcrumbProps {
-	children: ReactNode;
+import cn from "classnames";
+
+import { BreadcrumbItem, BreadcrumbItemProps } from "./BreadcrumbItem";
+
+declare global {
+	interface Function {
+		Item: React.FC<BreadcrumbItemProps>;
+	}
 }
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ children }) => {
+
+ export interface BreadcrumbProps {
+	/**
+	 * Child elements within
+	 */
+	children: ReactNode;
+	/**
+	 * Additional Class
+	 */
+	className?: string;
+}
+export const Breadcrumb: React.FC<BreadcrumbProps> = ({ children, className }) => {
 	return (
-		<ol className="breadcrumb" aria-label="breadcrumbs">
+		<ol className={cn("breadcrumb", className)} aria-label="breadcrumbs">
 			{children}
 		</ol>
 	);
 };
 
-export default Breadcrumb;
-export { BreadcrumbProps };
+Breadcrumb.Item = BreadcrumbItem;

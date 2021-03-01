@@ -4,7 +4,7 @@ import cn from "classnames";
 
 export interface AlertLinkProps {
 	/**
-	 * Child elements inside the Alert
+	 * Child elements within
 	 */
 	children?: ReactNode;
 	/**

@@ -1,27 +1,48 @@
 import React, { ReactNode } from "react";
 
-interface CardProps {
+import cn from "classnames";
+
+export interface CardProps {
+	/**
+	 * Child elements within
+	 */
 	children?: ReactNode;
+	/**
+	 * Additional Class
+	 */
+	className?: string;
+	/**
+	 * Card Title
+	 */
 	title?: string;
+	/**
+	 * Size
+	 */
 	size?: "sm" | "md" | "lg";
+	/**
+	 * Add a color to one side
+	 */
 	statusColor?: string;
+	/**
+	 * Position of the Color
+	 */
 	statusPosition?: "top" | "start";
+	/**
+	 * Shows cards in stacked view
+	 */
 	stacked?: boolean;
 }
-const Card: React.FC<CardProps> = ({
+export const Card: React.FC<CardProps> = ({
 	children,
+	className,
 	title,
 	size,
 	statusColor,
 	statusPosition,
 	stacked,
 }) => {
-	const classes = ["card"];
-	size && classes.push(`card-${size}`);
-	stacked && classes.push("card-stacked");
-
 	return (
-		<div className={classes.join(" ")}>
+		<div className={cn("card", size && `card-${size}`, stacked && "card-stacked", className)}>
 			{statusColor ? (
 				<div
 					className={`card-status-${
@@ -37,6 +58,3 @@ const Card: React.FC<CardProps> = ({
 		</div>
 	);
 };
-
-export default Card;
-export { CardProps };

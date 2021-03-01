@@ -1,17 +1,26 @@
 import React, { ReactNode } from "react";
 
-interface ButtonListProps {
+import cn from "classnames";
+
+export interface ButtonListProps {
+	/**
+	 * Child elements within
+	 */
 	children?: ReactNode;
+	/**
+	 * Additional Class
+	 */
+	className?: string;
+	/**
+	 * Alignment
+	 */
 	align?: "center" | "right";
 }
-const ButtonList: React.FC<ButtonListProps> = ({ children, align }) => {
-	const classes = ["btn-list"];
+export const ButtonList: React.FC<ButtonListProps> = ({ children, className, align }) => {
+	const classes = {
+		"justify-content-center": align === "center",
+		"justify-content-end": align === "right",
+	};
 
-	align === "center" && classes.push("justify-content-center");
-	align === "right" && classes.push("justify-content-end");
-
-	return <div className={classes.join(" ")}>{children}</div>;
+	return <div className={cn("btn-list", classes, className)}>{children}</div>;
 };
-
-export default ButtonList;
-export { ButtonListProps };

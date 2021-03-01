@@ -1,0 +1,55 @@
+---
+name: Card
+route: /components/Card
+---
+
+import { Playground, Props } from "docz";
+import { Card } from "./Card.tsx";
+
+# Card
+
+## Usage
+
+<Playground>
+	<Card title="Card Title" statusColor="info">
+		Card Body
+	</Card>
+</Playground>
+
+## Sizes
+
+<Playground>
+	<Card size="sm">Small</Card>
+	<br />
+	<Card size="md">Medium</Card>
+	<br />
+	<Card size="lg">Large</Card>
+</Playground>
+
+## Titles
+
+<Playground>
+	<Card title="Title 1">Body</Card>
+</Playground>
+
+## Status Color
+
+<Playground>
+	<Card title="Title 1" statusColor="info">
+		Body
+	</Card>
+	<br />
+	<Card title="Title 2" statusColor="success" statusPosition="start">
+		Body
+	</Card>
+</Playground>
+
+## Stacked
+
+<Playground>
+	<Card stacked>Body</Card>
+</Playground>
+
+## Properties
+
+<Props of={Card} />

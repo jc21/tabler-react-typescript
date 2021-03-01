@@ -2,17 +2,17 @@ import React, { ReactNode, useState } from "react";
 
 import cn from "classnames";
 
-import { AlertLink } from "./AlertLink";
+import { AlertLink, AlertLinkProps } from "./AlertLink";
 
 declare global {
 	interface Function {
-		Link: React.FC;
+		Link: React.FC<AlertLinkProps>;
 	}
 }
 
 export interface AlertProps {
 	/**
-	 * Child elements inside the Alert
+	 * Child elements within
 	 */
 	children?: ReactNode;
 	/**

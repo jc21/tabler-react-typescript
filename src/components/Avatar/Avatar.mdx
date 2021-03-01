@@ -1,0 +1,153 @@
+---
+name: Avatar
+route: /components/Avatar
+---
+
+import { Playground, Props } from "docz";
+import { Avatar } from "./Avatar.tsx";
+import { AvatarList } from "../AvatarList/AvatarList.tsx";
+import { BrandTwitter, Plus, UserPlus } from "tabler-icons-react";
+
+# Avatar
+
+## Usage
+
+Set an image to make users easy to indentify and create a personalised
+experience.
+
+<Playground>
+	<AvatarList>
+		<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
+		<Avatar url="https://tabler-react-typescript.jc21.com/assets/002m.jpg" />
+		<Avatar url="https://tabler-react-typescript.jc21.com/assets/003m.jpg" />
+	</AvatarList>
+</Playground>
+
+## Initials
+
+You can also use initials instead of pictures.
+
+<Playground>
+	<AvatarList>
+		<Avatar initials="JC" /> <Avatar initials="BV" />{" "}
+		<Avatar initials="DH" />
+		<Avatar initials="RG" /> <Avatar initials="LR" /> <Avatar initials="MD" />
+	</AvatarList>
+</Playground>
+
+## Icons
+
+Apart from pictures and initials, you can also use icons to make the avatars
+more universal.
+
+All icons come from the
+[Tabler Icons React](https://www.npmjs.com/package/tabler-icons-react) package,
+which is a react wrapper for [Tabler Icons](https://tabler-icons.io) and they
+are MIT-licensed.
+
+<Playground>
+	<AvatarList>
+		<Avatar icon={<BrandTwitter />} /> <Avatar icon={<Plus />} />
+		<Avatar icon={<UserPlus />} />
+		<Avatar icon={<BrandTwitter />} color="blue-lt" />
+		<Avatar icon={<Plus />} color="orange-lt" />
+		<Avatar icon={<UserPlus />} color="teal-lt" />
+	</AvatarList>
+</Playground>
+
+## Colors
+
+Customize the color of the avatars’ background. You can click here to see the
+list of available colors.
+
+<Playground>
+	<AvatarList>
+		<Avatar initials="JC" color="blue" />
+		<Avatar initials="BV" color="azure" />
+		<Avatar initials="DH" color="indigo" />
+		<Avatar initials="RG" color="purple" />
+		<Avatar initials="LR" color="pink" />
+		<Avatar initials="MD" color="red" />
+		<Avatar initials="JC" color="orange" />
+		<Avatar initials="BV" color="yellow" />
+		<Avatar initials="DH" color="lime" />
+		<Avatar initials="RG" color="green" />
+		<Avatar initials="LR" color="teal" />
+		<Avatar initials="MD" color="cyan" />
+	</AvatarList>
+	<AvatarList>
+		<Avatar initials="JC" color="blue-lt" />
+		<Avatar initials="BV" color="azure-lt" />
+		<Avatar initials="DH" color="indigo-lt" />
+		<Avatar initials="RG" color="purple-lt" />
+		<Avatar initials="LR" color="pink-lt" />
+		<Avatar initials="MD" color="red-lt" />
+		<Avatar initials="JC" color="orange-lt" />
+		<Avatar initials="BV" color="yellow-lt" />
+		<Avatar initials="DH" color="lime-lt" />
+		<Avatar initials="RG" color="green-lt" />
+		<Avatar initials="LR" color="teal-lt" />
+		<Avatar initials="MD" color="cyan-lt" />
+	</AvatarList>
+</Playground>
+
+## Sizes
+
+Using Bootstrap’s typical naming structure, you can create a standard avatar or
+scale it up or down to different sizes based on what you need.
+
+<Playground>
+	<AvatarList>
+		<Avatar initials="XL" color="blue-lt" size="xl" />
+		<Avatar initials="LG" color="azure-lt" size="lg" />
+		<Avatar initials="MD" color="indigo-lt" size="md" />
+		<Avatar initials="DF" color="purple-lt" />
+		<Avatar initials="SM" color="pink-lt" size="sm" />
+		<Avatar initials="XS" color="red-lt" size="xs" />
+	</AvatarList>
+</Playground>
+
+## Status
+
+Add a status indicator to your avatar to show, for instance, if a users is
+online or offline or indicate the number of messages they have received.
+
+<Playground>
+	<AvatarList>
+		<Avatar initials="JC" status="info" />
+		<Avatar initials="BV" status="success" />
+		<Avatar
+			url="https://tabler-react-typescript.jc21.com/assets/000m.jpg"
+			status="warning"
+		/>
+		<Avatar initials="RG" status="danger" />
+	</AvatarList>
+</Playground>
+
+## Shapes
+
+Change the shape of an avatar with the default Bootstrap image classes. You can
+make them round or square and change their border radius.
+
+<Playground>
+	<AvatarList>
+		<Avatar initials="JC" />
+		<Avatar
+			url="https://tabler-react-typescript.jc21.com/assets/000m.jpg"
+			shape="rounded"
+		/>
+		<Avatar
+			url="https://tabler-react-typescript.jc21.com/assets/002m.jpg"
+			shape="rounded-circle"
+		/>
+		<Avatar
+			url="https://tabler-react-typescript.jc21.com/assets/003m.jpg"
+			shape="rounded-0"
+		/>
+		<Avatar initials="RG" shape="rounded-lg" />
+	</AvatarList>
+</Playground>
+
+## Properties
+
+<Props of={Avatar} />

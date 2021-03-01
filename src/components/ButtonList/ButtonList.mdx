@@ -1,0 +1,44 @@
+---
+name: ButtonList
+route: /components/ButtonList
+---
+
+import { Playground, Props } from "docz";
+import { ButtonList } from "./ButtonList.tsx";
+import { Button } from "../Button/Button.tsx";
+
+# ButtonList
+
+## Usage
+
+<Playground>
+	<ButtonList>
+		<Button color="primary">Primary</Button>
+		<Button color="secondary">Secondary</Button>
+		<Button color="success">Success</Button>
+	</ButtonList>
+</Playground>
+
+## Center
+
+<Playground>
+	<ButtonList align="center">
+		<Button color="primary">Primary</Button>
+		<Button color="secondary">Secondary</Button>
+		<Button color="success">Success</Button>
+	</ButtonList>
+</Playground>
+
+## Right
+
+<Playground>
+	<ButtonList align="right">
+		<Button color="primary">Primary</Button>
+		<Button color="secondary">Secondary</Button>
+		<Button color="success">Success</Button>
+	</ButtonList>
+</Playground>
+
+## Properties
+
+<Props of={ButtonList} />

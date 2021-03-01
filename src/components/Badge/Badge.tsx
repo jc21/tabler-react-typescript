@@ -1,19 +1,31 @@
 import React, { ReactNode } from "react";
 
-interface BadgeProps {
+import cn from "classnames";
+
+export interface BadgeProps {
+	/**
+	 * Child elements within
+	 */
 	children?: ReactNode;
+	/**
+	 * Additional Class
+	 */
+	className?: string;
+	/**
+	 * Color of the Badge
+	 */
 	color?: string;
+	/**
+	 * Type of Badge
+	 */
 	type?: "pill" | "soft";
 }
-const Badge: React.FC<BadgeProps> = ({ children, color, type }) => {
+export const Badge: React.FC<BadgeProps> = ({ children, className, color, type }) => {
 	let modifier = "";
 
 	type === "soft" && (modifier = "-lt");
 	const classes = ["badge", "bg-" + (color || "blue") + modifier];
 	type === "pill" && classes.push("badge-pill");
 
-	return <span className={classes.join(" ")}>{children}</span>;
+	return <span className={cn(classes, className)}>{children}</span>;
 };
-
-export default Badge;
-export { BadgeProps };

@@ -1,11 +1,22 @@
 import React, { ReactNode } from "react";
 
-interface DropdownProps {
-	children: ReactNode;
+import cn from "classnames";
+
+// TODO
+
+export interface DropdownProps {
+	/**
+	 * Child elements within
+	 */
+	children?: ReactNode;
+	/**
+	 * Additional Class
+	 */
+	className?: string;
 }
-const Dropdown: React.FC<DropdownProps> = ({ children }) => {
+export const Dropdown: React.FC<DropdownProps> = ({ children, className }) => {
 	return (
-		<div className="dropdown-menu dropdown-menu-demo">
+		<div className={cn("dropdown-menu", "dropdown-menu-demo", className)}>
 			<a className="dropdown-item" href="#">
 				Action
 			</a>
@@ -15,6 +26,3 @@ const Dropdown: React.FC<DropdownProps> = ({ children }) => {
 		</div>
 	);
 };
-
-export default Dropdown;
-export { DropdownProps };

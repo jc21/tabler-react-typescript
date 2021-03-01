@@ -1,28 +1,44 @@
 import React, { ReactNode } from "react";
 
-interface ImageCardProps {
-	image: string;
+import cn from "classnames";
+
+export interface ImageCardProps {
+	/**
+	 * Child elements within
+	 */
 	children?: ReactNode;
+	/**
+	 * Additional Class
+	 */
+	className?: string;
+	/**
+	 * Image URL
+	 */
+	image: string;
+	/**
+	 * Title
+	 */
 	title?: string;
+	/**
+	 * Size
+	 */
 	size?: "sm" | "md" | "lg";
 }
-const ImageCard: React.FC<ImageCardProps> = ({
-	image,
+export const ImageCard: React.FC<ImageCardProps> = ({
 	children,
+	className,
+	image,
 	title,
 	size,
 }) => {
-	const classes = ["card"];
-	size && classes.push(`card-${size}`);
-
 	const styles = {
 		backgroundImage: `url(${image})`,
 	};
 
 	return (
-		<div className={classes.join(" ")}>
+		<div className={cn("card", size && `card-${size}`, className)}>
 			<div
-				className="card-img-top img-responsive img-responsive-16by9"
+				className="card-img-top img-responsive"
 				style={styles}></div>
 			<div className="card-body">
 				{title ? <h3 className="card-title">{title}</h3> : null}
@@ -31,6 +47,3 @@ const ImageCard: React.FC<ImageCardProps> = ({
 		</div>
 	);
 };
-
-export default ImageCard;
-export { ImageCardProps };
