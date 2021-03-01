@@ -22,8 +22,13 @@
 ## Install
 
 ```bash
-npm install --save tabler-react-typescript
+yarn install --save tabler-react-typescript
 ```
+
+## Usage
+
+Refer to the
+[documentation](https://tabler-react-typescript.jc21.com?utm_source=github)
 
 ## Development
 
