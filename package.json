@@ -14,10 +14,6 @@
 		"test:watch": "jest --watch",
 		"lint": "yarn jest --config jest.eslint.js --watch",
 		"lint:ci": "yarn lint --watchAll=false",
-		"generate": "node ./util/create-component",
-		"prepublishOnly": "npm run build",
-		"prettier": "prettier \"**/*.+(js|json|yml|css|ts|tsx)\"",
-		"format": "yarn prettier -- --write",
 		"docz:dev": "docz dev",
 		"docz:build": "docz build",
 		"docz:serve": "docz build && docz serve"

@@ -36,9 +36,6 @@ Refer to the
 git clone https://github.com/jc21/tabler-react-typescript.git
 ```
 
-This project used
-[this react library template](https://github.com/HarveyD/react-component-library).
-
 ### Testing
 
 ```bash
@@ -51,28 +48,11 @@ yarn test
 yarn build
 ```
 
-### Generating New Components
+### Documentation Development
 
+```bash
+yarn docz:dev
 ```
-yarn generate YourComponentName
-```
-
-This will generate:
-
-```
-/src
-  /YourComponentName
-    YourComponentName.tsx
-    YourComponentName.stories.tsx
-    YourComponentName.test.tsx
-    YourComponentName.types.ts
-    YourComponentName.scss
-```
-
-The default templates for each file can be modified under `util/templates`.
-
-Don't forget to add the component to your `index.ts` exports if you want the
-library to export the component!
 
 ## License
 
