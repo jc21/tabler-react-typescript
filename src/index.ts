@@ -6,5 +6,7 @@ export * from "./components/Breadcrumb";
 export * from "./components/Button";
 export * from "./components/ButtonList";
 export * from "./components/Card";
+export * from "./components/Carousel";
+export * from "./components/Divider";
 export * from "./components/Dropdown";
 export * from "./components/ImageCard";

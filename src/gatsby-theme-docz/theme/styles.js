@@ -19,7 +19,7 @@ styles.root["div[data-testid=\"live-editor\"]"] = {
 };
 
 styles.root["div[data-testid=\"main-container\"]"] = {
-	h2: {
+	"> h2": {
 		marginTop: "40px"
 	}
 };

@@ -37,9 +37,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({
 
 	return (
 		<div className={cn("card", size && `card-${size}`, className)}>
-			<div
-				className="card-img-top img-responsive"
-				style={styles}></div>
+			<div className="card-img-top img-responsive" style={styles} />
 			<div className="card-body">
 				{title ? <h3 className="card-title">{title}</h3> : null}
 				{children}

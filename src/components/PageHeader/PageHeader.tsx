@@ -27,6 +27,10 @@ export interface PageHeaderProps {
 	 * Sub Title
 	 */
 	subTitle?: ReactNode;
+	/**
+	 * Show bottom border
+	 */
+	border?: boolean;
 }
 export const PageHeader: React.FC<PageHeaderProps> = ({
 	children,
@@ -35,12 +39,15 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 	title,
 	subTitle,
 	breadcrumb,
+	border,
 }) => {
 	return (
-		<div className={cn("page-header", className)}>
+		<div className={cn("page-header", border && "page-header-border", className)}>
 			<div className="row align-items-center">
 				<div className="col">
-					{breadcrumb}
+					{breadcrumb ? (
+						<div className="mb-1">{breadcrumb}</div>
+					): null}
 					{preTitle ? (
 						<div className="page-pretitle">{preTitle}</div>
 					) : null}

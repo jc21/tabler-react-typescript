@@ -4,5 +4,8 @@
 	"files": "**/*.mdx",
 	"dest": "example/public/docz",
 	"title": "Tabler React Typescript Docz",
-	"menu": ["Introduction"]
+	"menu": ["Introduction"],
+	"themeConfig": {
+		"showPlaygroundEditor": false
+	}
 }
