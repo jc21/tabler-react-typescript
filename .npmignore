@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Only allow files and folders required for the build
+!lib/
+!package.json
+!README.md
+!LICENSE

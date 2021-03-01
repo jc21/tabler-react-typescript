@@ -1,12 +1,12 @@
 {
 	"name": "tabler-react-typescript",
-	"version": "0.0.0",
-	"main": "build/index.js",
-	"module": "build/index.esm.js",
+	"version": "0.0.1",
+	"main": "lib/index.js",
+	"module": "lib/index.esm.js",
 	"files": [
-		"build"
+		"lib"
 	],
-	"types": "build/index.d.ts",
+	"types": "lib/index.d.ts",
 	"description": "React Components for Tabler",
 	"scripts": {
 		"build": "rollup -c",
