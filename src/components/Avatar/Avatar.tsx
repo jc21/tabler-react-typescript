@@ -1,7 +1,8 @@
 import React, { ReactNode } from "react";
 
-import {Badge} from "../Badge";
 import cn from "classnames";
+
+import { Badge } from "../Badge";
 
 export interface AvatarProps {
 	/**

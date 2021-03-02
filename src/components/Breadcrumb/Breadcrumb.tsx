@@ -10,7 +10,7 @@ declare global {
 	}
 }
 
- export interface BreadcrumbProps {
+export interface BreadcrumbProps {
 	/**
 	 * Child elements within
 	 */
@@ -19,10 +19,30 @@ declare global {
 	 * Additional Class
 	 */
 	className?: string;
+	/**
+	 * Separator type
+	 */
+	separator?: "arrows" | "bullets" | "dot";
+	/**
+	 * Alternate style
+	 */
+	alternate?: boolean;
 }
-export const Breadcrumb: React.FC<BreadcrumbProps> = ({ children, className }) => {
+export const Breadcrumb: React.FC<BreadcrumbProps> = ({
+	children,
+	className,
+	separator,
+	alternate,
+}) => {
 	return (
-		<ol className={cn("breadcrumb", className)} aria-label="breadcrumbs">
+		<ol
+			className={cn(
+				"breadcrumb",
+				separator && `breadcrumb-${separator}`,
+				alternate && "breadcrumb-alternate",
+				className,
+			)}
+			aria-label="breadcrumbs">
 			{children}
 		</ol>
 	);

@@ -8,10 +8,77 @@ import { Breadcrumb } from "./Breadcrumb.tsx";
 
 # Breadcrumb
 
+Breadcrumbs are used to show the current website or app location and reduce the
+number of actions users have to take. Thanks to breadcrumbs, they can easily
+navigate within the website hierarchy and better understand its structure.
+
 ## Usage
+
+The active modifier will help you indicate the current page location and
+facilitate navigation within your website or app.
 
 <Playground>
 	<Breadcrumb>
+		<Breadcrumb.Item>
+			<a href="/">Home</a>
+		</Breadcrumb.Item>
+		<Breadcrumb.Item>
+			<a href="/">Next</a>
+		</Breadcrumb.Item>
+		<Breadcrumb.Item active>
+			<a href="/">Here</a>
+		</Breadcrumb.Item>
+	</Breadcrumb>
+</Playground>
+
+## Variations
+
+If you wish to use different separators, specify the `separator`. Depending on
+the aesthetics of your design, you can choose `dots`, `bullets` or `arrows`.
+
+<Playground>
+	<Breadcrumb separator="dots">
+		<Breadcrumb.Item>
+			<a href="/">Home</a>
+		</Breadcrumb.Item>
+		<Breadcrumb.Item>
+			<a href="/">Next</a>
+		</Breadcrumb.Item>
+		<Breadcrumb.Item active>
+			<a href="/">Here</a>
+		</Breadcrumb.Item>
+	</Breadcrumb>
+	<Breadcrumb separator="bullets">
+		<Breadcrumb.Item>
+			<a href="/">Home</a>
+		</Breadcrumb.Item>
+		<Breadcrumb.Item>
+			<a href="/">Next</a>
+		</Breadcrumb.Item>
+		<Breadcrumb.Item active>
+			<a href="/">Here</a>
+		</Breadcrumb.Item>
+	</Breadcrumb>
+	<Breadcrumb separator="arrows">
+		<Breadcrumb.Item>
+			<a href="/">Home</a>
+		</Breadcrumb.Item>
+		<Breadcrumb.Item>
+			<a href="/">Next</a>
+		</Breadcrumb.Item>
+		<Breadcrumb.Item active>
+			<a href="/">Here</a>
+		</Breadcrumb.Item>
+	</Breadcrumb>
+</Playground>
+
+## Alternate
+
+Specify `alternate` to make the breadcrumb colors more neutral, retaining its
+function of showing the current location within an interface.
+
+<Playground>
+	<Breadcrumb alternate>
 		<Breadcrumb.Item>
 			<a href="/">Home</a>
 		</Breadcrumb.Item>

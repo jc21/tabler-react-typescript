@@ -9,10 +9,27 @@ import { ButtonList } from "../ButtonList/ButtonList.tsx";
 
 # Button
 
+Use button styles that best suit your designs and encourage users to take the
+desired actions. You can customize the button's properties to improve the user
+experience of your website or system, changing the size, shape, color and many
+more.
+
 ## Usage
+
+As one of the most common elements of UI design, buttons have a very important
+function of engaging users with your website or app and guiding them in their
+actions.
+
+The standard button creates a white background and subtle hover animation. It’s
+meant to look and behave as an interactive element of your page.
+
+Use the button classes that correspond to the function of your button. The big
+range of available colors will help you show your buttons’ purpose and make them
+easy to spot.
 
 <Playground>
 	<ButtonList>
+		<Button>Default</Button>
 		<Button color="primary">Primary</Button>
 		<Button color="secondary">Secondary</Button>
 		<Button color="success">Success</Button>
@@ -26,8 +43,12 @@ import { ButtonList } from "../ButtonList/ButtonList.tsx";
 
 ## Disabled
 
+Make buttons look inactive to show that an action is possible once the user
+meets certain criteria, such as completing the required fields to submit a form.
+
 <Playground>
 	<ButtonList>
+		<Button disabled>Default</Button>
 		<Button disabled color="primary">
 			Primary
 		</Button>
@@ -56,6 +77,11 @@ import { ButtonList } from "../ButtonList/ButtonList.tsx";
 </Playground>
 
 ## Loading
+
+Add the `loading` property to show a button’s loading state, which can be useful
+in the case of operations that take longer to process. Thanks to that, users
+will be aware of the current state of their action and won’t give it up before
+it’s finished.
 
 <Playground>
 	<ButtonList>
@@ -88,6 +114,10 @@ import { ButtonList } from "../ButtonList/ButtonList.tsx";
 
 ## Ghost
 
+Use the `ghost` shape to make your button look simple yet aesthetically
+appealing. Ghost buttons help focus users’ attention on the website’s primary
+design, at the same time encouraging them to take action.
+
 <Playground>
 	<ButtonList>
 		<Button shape="ghost" color="primary">
@@ -118,6 +148,10 @@ import { ButtonList } from "../ButtonList/ButtonList.tsx";
 </Playground>
 
 ## Outline
+
+Use the `outline` shape if you want to remove the color and the background of
+your button and give it a more subtle look. Outline buttons are perfect to use
+as secondary buttons, as they don’t distract users from the main action.
 
 <Playground>
 	<ButtonList>
@@ -150,6 +184,9 @@ import { ButtonList } from "../ButtonList/ButtonList.tsx";
 
 ## Square
 
+Use the `square` shape to remove the border radius, if you want the corners of
+your button to be square rather than rounded.
+
 <Playground>
 	<ButtonList>
 		<Button shape="square" color="primary">
@@ -180,6 +217,9 @@ import { ButtonList } from "../ButtonList/ButtonList.tsx";
 </Playground>
 
 ## Pill
+
+Add the `pill` shape to your button to make it rounded and give it a modern and
+attractive look.
 
 <Playground>
 	<ButtonList>
@@ -212,6 +252,11 @@ import { ButtonList } from "../ButtonList/ButtonList.tsx";
 
 ## Colors
 
+Choose the right color for your button to make it go well with your design and
+draw users’ attention. Button colors can have a big influence on users’
+decisions, which is why it’s important to choose them based on the intended
+purpose.
+
 <Playground>
 	<ButtonList>
 		<Button color="blue">Blue</Button>
@@ -231,6 +276,10 @@ import { ButtonList } from "../ButtonList/ButtonList.tsx";
 
 ## Sizes
 
+Add `size` property to change the size of your button and differentiate those
+which should have primary focus from those of secondary importance. Adapt the
+button size to your design and encourage users to take actions.
+
 <Playground>
 	<ButtonList>
 		<Button color="primary" size="sm">
@@ -244,6 +293,10 @@ import { ButtonList } from "../ButtonList/ButtonList.tsx";
 </Playground>
 
 ## Social
+
+You can use the icons of popular social networking sites, which users are
+familiar with. Thanks to buttons with social media icons users can share content
+or follow a website with just one click, without leaving the website.
 
 <Playground>
 	<ButtonList>

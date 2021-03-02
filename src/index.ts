@@ -9,4 +9,5 @@ export * from "./components/Card";
 export * from "./components/Carousel";
 export * from "./components/Divider";
 export * from "./components/Dropdown";
+export * from "./components/Empty";
 export * from "./components/ImageCard";

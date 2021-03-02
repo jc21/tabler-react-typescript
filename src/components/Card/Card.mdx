@@ -8,7 +8,16 @@ import { Card } from "./Card.tsx";
 
 # Card
 
+Cards are flexible user interface elements, which help organize content into
+meaningful sections and make it easier to display on different screen sizes.
+Cards contain various smaller components, such as images, text, links and
+buttons and may act as an entry to more detailed information, helping users scan
+the page quickly and find the most relevant content.
+
 ## Usage
+
+Create a card and use it as the basis for a more advanced card design. A card is
+a perfect way to organize content and make it look neat and tidy.
 
 <Playground>
 	<Card title="Card Title" statusColor="info">
@@ -17,6 +26,12 @@ import { Card } from "./Card.tsx";
 </Playground>
 
 ## Sizes
+
+You can change the padding of a newly created card.
+
+Small cards are well suited for small items such as widgets, etc., while the
+Large cards can be used for large blocks of text. Padding will be automatically
+reduced on small devices, to fit the screen size.
 
 <Playground>
 	<Card size="sm">Small</Card>
@@ -28,11 +43,16 @@ import { Card } from "./Card.tsx";
 
 ## Titles
 
+Titles are a nice aesthetic to add separation of content.
+
 <Playground>
 	<Card title="Title 1">Body</Card>
 </Playground>
 
 ## Status Color
+
+Add a status color to your card, either at the top or on the side of the card,
+to customise it and make it more eye-catching.
 
 <Playground>
 	<Card title="Title 1" statusColor="info">
@@ -45,6 +65,9 @@ import { Card } from "./Card.tsx";
 </Playground>
 
 ## Stacked
+
+Use the `stacked` property to stack up multiple cards, if you want to save
+screen space or create a visually appealing effect.
 
 <Playground>
 	<Card stacked>Body</Card>

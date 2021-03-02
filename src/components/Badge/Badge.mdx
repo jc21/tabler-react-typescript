@@ -8,7 +8,14 @@ import { Badge } from "./Badge.tsx";
 
 # Badge
 
+Badges are small count and labeling components, which are used to add extra
+information to an interface element. You can use them to draw users' attention
+to a new element, notify about unread messages or provide any kind of additional
+info.
+
 ## Usage
+
+The default badges are square and come in the basic set of colors.
 
 <Playground>
 	<Badge color="blue">blue</Badge> <Badge color="azure">azure</Badge>{" "}
@@ -20,6 +27,9 @@ import { Badge } from "./Badge.tsx";
 </Playground>
 
 ## Pill
+
+Set the `pill` type if you want to create a badge with rounded corners. Its
+width will adjust to the label text.
 
 <Playground>
 	<Badge color="blue" type="pill">
@@ -62,6 +72,9 @@ import { Badge } from "./Badge.tsx";
 
 ## Soft
 
+You can create a soft color variant of a corresponding contextual badge
+variation, to make it look more subtle.
+
 <Playground>
 	<Badge color="blue" type="soft">
 		blue
@@ -102,6 +115,10 @@ import { Badge } from "./Badge.tsx";
 </Playground>
 
 ## Empty
+
+Leave the element empty if you want to create badges without any text. Empty
+badges are particularly useful if you want to make an interface element more
+noticeable regardless of limited space.
 
 <Playground>
 	<Badge color="blue" /> <Badge color="azure" /> <Badge color="indigo" />{" "}

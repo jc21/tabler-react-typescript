@@ -1,0 +1,75 @@
+---
+name: Empty
+route: /components/Empty
+---
+
+import { Playground, Props } from "docz";
+import { Empty } from "./Empty.tsx";
+import { Button } from "../Button/Button.tsx";
+import { ArrowLeft, MoodSad, Plus, Search } from "tabler-icons-react";
+
+# Empty
+
+Empty states or blank pages are commonly used as placeholders for first-use,
+empty data or error screens. Their aim is to engage users when there is no
+content to display and that is why their design is extremely important from the
+point of view of the user experience of your website or app.
+
+## Usage
+
+Instead of adding an icon or illustration you can simply give the header text:
+
+<Playground>
+	<Empty
+		headerText="404"
+		title="No results found"
+		subTitle="Try adjusting your search or filter to find what you're looking for."
+		button={
+			<Button color="primary">
+				<ArrowLeft /> Take me home
+			</Button>
+		}
+	/>
+</Playground>
+
+## Icon
+
+Engage users in the critical moments of their experience with your website or
+app. A good empty state screen should let users know what is happening and what
+they should do next as well as encourage them to take action.
+
+<Playground>
+	<Empty
+		icon={<MoodSad />}
+		title="No results found"
+		subTitle="Try adjusting your search or filter to find what you're looking for."
+		button={
+			<Button color="primary">
+				<Search /> Search again
+			</Button>
+		}
+	/>
+</Playground>
+
+## Image
+
+Make your empty state screen more attractive and engaging by adding an
+illustration. Thanks to a more personalized design, you will improve your brand
+image and make your website or app more user friendly.
+
+<Playground>
+	<Empty
+		image="https://tabler-react-typescript.jc21.com/assets/undraw_quitting_time_dm8t.svg"
+		title="Invoices are managed from here"
+		subTitle="Try adjusting your search or filter to find what you're looking for."
+		button={
+			<Button color="primary">
+				<Plus /> New invoice
+			</Button>
+		}
+	/>
+</Playground>
+
+## Properties
+
+<Props of={Empty} />

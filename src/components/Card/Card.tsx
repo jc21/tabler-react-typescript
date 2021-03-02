@@ -42,7 +42,13 @@ export const Card: React.FC<CardProps> = ({
 	stacked,
 }) => {
 	return (
-		<div className={cn("card", size && `card-${size}`, stacked && "card-stacked", className)}>
+		<div
+			className={cn(
+				"card",
+				size && `card-${size}`,
+				stacked && "card-stacked",
+				className,
+			)}>
 			{statusColor ? (
 				<div
 					className={`card-status-${

@@ -8,13 +8,23 @@ import { Divider } from "./Divider.tsx";
 
 # Divider
 
+Dividers help organize content and make the interface layout clear and
+uncluttered. Greater clarity adds up to better user experience and enhanced
+interaction with a website or app.
+
 ## Usage
+
+Use dividers to visually separate content into parts. You can use a line only or
+add text that will be centered by default.
 
 <Playground>
 	<Divider text="See also" />
 </Playground>
 
 ## Alignment
+
+You can modify the position of the text which is to be included in a separator
+and make it left- or right-aligned. Otherwise, the text will remain centered.
 
 <Playground>
 	<p className="text-muted">
@@ -32,6 +42,33 @@ import { Divider } from "./Divider.tsx";
 		dolores doloribus est ex.
 	</p>
 	<Divider text="Chapter 3" align="right" />
+	<p className="text-muted">
+		Dicta error hic illo iure necessitatibus nihil officiis omnis
+		perferendis, praesentium repellendus rerum, saepe sed, sit!
+	</p>
+</Playground>
+
+## Colors
+
+Customize the color of dividers to make them go well with your design. Click
+here to see the list of available colors.
+
+<Playground>
+	<p className="text-muted">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dolore
+		dolores doloribus est ex.
+	</p>
+	<Divider text="Green Divider" color="green" />
+	<p className="text-muted">
+		Dicta error hic illo iure necessitatibus nihil officiis omnis
+		perferendis, praesentium repellendus rerum, saepe sed, sit!
+	</p>
+	<Divider text="Red Divider" color="red" />
+	<p className="text-muted">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dolore
+		dolores doloribus est ex.
+	</p>
+	<Divider text="Primary Divider" color="primary" />
 	<p className="text-muted">
 		Dicta error hic illo iure necessitatibus nihil officiis omnis
 		perferendis, praesentium repellendus rerum, saepe sed, sit!
