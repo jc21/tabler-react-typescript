@@ -1,3 +1,12 @@
+import React from "react";
+
+declare global {
+	interface Function {
+		Item: React.FC<any>;
+		Link: React.FC<any>;
+	}
+}
+
 export * from "./components/Alert";
 export * from "./components/Avatar";
 export * from "./components/AvatarList";

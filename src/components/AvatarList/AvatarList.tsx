@@ -16,6 +16,19 @@ export interface AvatarListProps {
 	 */
 	stacked?: boolean;
 }
-export const AvatarList: React.FC<AvatarListProps> = ({ children, className, stacked }) => {
-	return <div className={cn("avatar-list", stacked && "avatar-list-stacked", className)}>{children}</div>;
+export const AvatarList: React.FC<AvatarListProps> = ({
+	children,
+	className,
+	stacked,
+}) => {
+	return (
+		<div
+			className={cn(
+				"avatar-list",
+				stacked && "avatar-list-stacked",
+				className,
+			)}>
+			{children}
+		</div>
+	);
 };

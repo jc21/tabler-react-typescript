@@ -16,7 +16,11 @@ export interface ButtonListProps {
 	 */
 	align?: "center" | "right";
 }
-export const ButtonList: React.FC<ButtonListProps> = ({ children, className, align }) => {
+export const ButtonList: React.FC<ButtonListProps> = ({
+	children,
+	className,
+	align,
+}) => {
 	const classes = {
 		"justify-content-center": align === "center",
 		"justify-content-end": align === "right",

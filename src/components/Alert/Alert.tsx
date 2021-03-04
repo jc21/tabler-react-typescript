@@ -2,13 +2,7 @@ import React, { ReactNode, useState } from "react";
 
 import cn from "classnames";
 
-import { AlertLink, AlertLinkProps } from "./AlertLink";
-
-declare global {
-	interface Function {
-		Link: React.FC<AlertLinkProps>;
-	}
-}
+import { AlertLink } from "./AlertLink";
 
 export interface AlertProps {
 	/**
@@ -73,8 +67,15 @@ export const Alert: React.FC<AlertProps> = ({
 		onDismissClick && onDismissClick(e);
 	};
 
-	const wrappedTitle = title ? <h4 className="alert-title">{title}</h4> : null;
-	const wrappedChildren = children && !important ? <div className="text-muted">{children}</div> : children;
+	const wrappedTitle = title ? (
+		<h4 className="alert-title">{title}</h4>
+	) : null;
+	const wrappedChildren =
+		children && !important ? (
+			<div className="text-muted">{children}</div>
+		) : (
+			children
+		);
 
 	const wrapIfIcon = (): ReactNode => {
 		if (avatar) {
@@ -93,11 +94,19 @@ export const Alert: React.FC<AlertProps> = ({
 					<div>
 						<span className="alert-icon">{icon}</span>
 					</div>
-					<div>{wrappedTitle}{wrappedChildren}</div>
+					<div>
+						{wrappedTitle}
+						{wrappedChildren}
+					</div>
 				</div>
 			);
 		}
-		return <>{wrappedTitle}{wrappedChildren}</>;
+		return (
+			<>
+				{wrappedTitle}
+				{wrappedChildren}
+			</>
+		);
 	};
 
 	if (!dismissed) {

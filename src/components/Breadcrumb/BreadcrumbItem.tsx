@@ -21,5 +21,9 @@ export const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
 	className,
 	active,
 }) => {
-	return <li className={cn("breadcrumb-item", active && "active", className)}>{children}</li>;
+	return (
+		<li className={cn("breadcrumb-item", active && "active", className)}>
+			{children}
+		</li>
+	);
 };

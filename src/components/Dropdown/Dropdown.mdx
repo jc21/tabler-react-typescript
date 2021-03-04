@@ -6,17 +6,122 @@ edit: false
 
 import { Playground, Props } from "docz";
 import { Dropdown } from "./Dropdown.tsx";
+import { Badge } from "../Badge/Badge.tsx";
+import { Edit, Settings } from "tabler-icons-react";
 
 # Dropdown
 
+Use dropdowns to display lists of options or include more positions in a menu
+without overwhelming users with too many buttons and long lists. Dropdowns
+facilitate users' interaction with your website or software and make your design
+look clear.
+
 ## Usage
 
-```
-TODO
-```
+<Playground>
+	<Dropdown className="demo">
+		<Dropdown.Item>Action</Dropdown.Item>
+		<Dropdown.Item>Another action</Dropdown.Item>
+		<Dropdown.Item divider />
+		<Dropdown.Item>Third action</Dropdown.Item>
+	</Dropdown>
+</Playground>
+
+## Active
+
+Make a dropdown item look active, so that it highlights when a user hovers over
+a given option.
 
 <Playground>
-	<Dropdown />
+	<Dropdown className="demo">
+		<Dropdown.Item>Action</Dropdown.Item>
+		<Dropdown.Item active>Another action</Dropdown.Item>
+	</Dropdown>
+</Playground>
+
+## Disabled
+
+Make a dropdown item look disabled to display options which are currently not
+available but can activate once certain conditions are met.
+
+<Playground>
+	<Dropdown className="demo">
+		<Dropdown.Item>Action</Dropdown.Item>
+		<Dropdown.Item disabled>Another action</Dropdown.Item>
+	</Dropdown>
+</Playground>
+
+## Header
+
+Add a dropdown header to group dropdown items into sections and name them
+accordingly.
+
+<Playground>
+	<Dropdown className="demo" header="Dropdown Header">
+		<Dropdown.Item>Action</Dropdown.Item>
+		<Dropdown.Item>Another action</Dropdown.Item>
+	</Dropdown>
+</Playground>
+
+## Icons
+
+Use icons in your dropdowns to add more visual content and make the options easy
+to identify for users.
+
+<Playground>
+	<Dropdown className="demo">
+		<Dropdown.Item icon={<Edit />}>Action</Dropdown.Item>
+		<Dropdown.Item icon={<Settings />}>Another action</Dropdown.Item>
+	</Dropdown>
+</Playground>
+
+## Arrow
+
+Add an arrow that points at the dropdown button.
+
+<Playground>
+	<Dropdown className="demo" arrow>
+		<Dropdown.Item icon={<Edit />}>Action</Dropdown.Item>
+		<Dropdown.Item icon={<Settings />}>Another action</Dropdown.Item>
+	</Dropdown>
+</Playground>
+
+## Badges
+
+Add a badge to your dropdown items to show additional information related to an
+item or distinguish it from other elements.
+
+<Playground>
+	<Dropdown className="demo">
+		<Dropdown.Item icon={<Edit />}>
+			Action
+			<Badge className="ms-auto" color="primary">
+				12
+			</Badge>
+		</Dropdown.Item>
+		<Dropdown.Item icon={<Settings />}>
+			Another action <Badge className="ms-auto" color="success" />
+		</Dropdown.Item>
+	</Dropdown>
+</Playground>
+
+## Dark
+
+Make your dropdown suit the dark mode of your website or software.
+
+<Playground>
+	<Dropdown className="demo" header="Dropdown Header" arrow dark>
+		<Dropdown.Item icon={<Edit />}>
+			Action{" "}
+			<Badge className="ms-auto" color="warning">
+				12
+			</Badge>
+		</Dropdown.Item>
+		<Dropdown.Item icon={<Settings />}>Another action</Dropdown.Item>
+		<Dropdown.Item divider />
+		<Dropdown.Item active>Third action</Dropdown.Item>
+		<Dropdown.Item disabled>Fourth action</Dropdown.Item>
+	</Dropdown>
 </Playground>
 
 ## Properties

@@ -41,11 +41,14 @@ export const Button: React.FC<ButtonProps> = ({
 	shape,
 	size,
 }) => {
-	const classes = ["btn", {
-		"disabled": disabled,
-		"btn-loading": loading,
-		[`btn-${size}`]: !!size,
-	}];
+	const classes = [
+		"btn",
+		{
+			disabled: disabled,
+			"btn-loading": loading,
+			[`btn-${size}`]: !!size,
+		},
+	];
 
 	let modifier = "";
 	shape === "ghost" && (modifier = "-ghost");

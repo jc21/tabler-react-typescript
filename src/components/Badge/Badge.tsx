@@ -20,7 +20,12 @@ export interface BadgeProps {
 	 */
 	type?: "pill" | "soft";
 }
-export const Badge: React.FC<BadgeProps> = ({ children, className, color, type }) => {
+export const Badge: React.FC<BadgeProps> = ({
+	children,
+	className,
+	color,
+	type,
+}) => {
 	let modifier = "";
 
 	type === "soft" && (modifier = "-lt");
