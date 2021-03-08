@@ -53,7 +53,8 @@ export const Card: React.FC<CardProps> = ({
 				<div
 					className={`card-status-${
 						statusPosition || "top"
-					} bg-${statusColor}`}></div>
+					} bg-${statusColor}`}
+				/>
 			) : null}
 			{title ? (
 				<div className="card-header">

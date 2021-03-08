@@ -1,0 +1,55 @@
+---
+name: Progress
+route: /components/Progress
+edit: false
+---
+
+import { Playground, Props } from "docz";
+import { Progress } from "./Progress.tsx";
+
+# Progress Bars
+
+Progress bars are used to provide feedback on an action status and inform users
+of the current progress. Although seemingly small interface elements, they are
+extremely hepful in managing users' expectations and preventing them from
+abandoning a process they have initiated.
+
+## Usage
+
+<Playground>
+	<Progress value={50} />
+</Playground>
+
+## Sizes
+
+Using Bootstrap’s typical naming structure, you can create a standard progress
+bar or scale it up or down to different sizes based on what’s needed.
+
+<Playground>
+	<Progress value={33} size="sm" />
+</Playground>
+
+## Indeterminate
+
+You can create a progress bar which shows indeterminate progress by adding
+`indeterminate` to the component.
+
+<Playground>
+	<Progress value={0} size="sm" indeterminate />
+</Playground>
+
+## Colors
+
+Customize the color of the progress bar to suit your design.
+
+<Playground>
+	<Progress value={20} size="sm" className="mb-2" color="red" />
+	<Progress value={40} size="sm" className="mb-2" color="green" />
+	<Progress value={60} size="sm" className="mb-2" color="purple" />
+	<Progress value={80} size="sm" className="mb-2" color="pink" />
+	<Progress value={99} size="sm" className="mb-2" color="warning" />
+</Playground>
+
+## Properties
+
+<Props of={Progress} />

@@ -1,0 +1,104 @@
+---
+name: Modal
+route: /components/Modal
+edit: false
+---
+
+import { Playground, Props } from "docz";
+import { Modal } from "./Modal.tsx";
+import { Button } from "../Button/Button.tsx";
+import { AlertTriangle, CircleCheck } from "tabler-icons-react";
+
+# Modal
+
+Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for
+lightboxes, user notifications, or completely custom content.
+
+## Usage
+
+<Playground>
+	<Modal
+		title="Modal Title"
+		closable
+		footer={
+			<>
+				<Button className="me-auto">Close</Button>
+				<Button color="primary">Save changes</Button>
+			</>
+		}>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi
+		beatae delectus deleniti dolorem eveniet facere fuga iste nemo nesciunt
+		nihil odio perspiciatis, quia quis reprehenderit sit tempora totam unde.
+	</Modal>
+</Playground>
+
+## Prompt and alert
+
+<Playground>
+	<Modal
+		statusColor="danger"
+		className="modal-sm"
+		bodyClassName="text-center"
+		footer={
+			<div class="w-100">
+				<div class="row">
+					<div class="col">
+						<Button className="w-100">Cancel</Button>
+					</div>
+					<div class="col">
+						<Button className="w-100" color="danger">
+							Delete 84 items
+						</Button>
+					</div>
+				</div>
+			</div>
+		}>
+		<AlertTriangle
+			size={64}
+			style={{ width: "64px", height: "64px" }}
+			color="#d63939"
+		/>
+		<h3>Are you sure?</h3>
+		<div class="text-muted">
+			Do you really want to remove 84 files? What you've done cannot be
+			undone.
+		</div>
+	</Modal>
+</Playground>
+
+<Playground>
+	<Modal
+		statusColor="success"
+		className="modal-sm"
+		bodyClassName="text-center"
+		closable
+		footer={
+			<div class="w-100">
+				<div class="row">
+					<div class="col">
+						<Button className="w-100">Go to Dashboard</Button>
+					</div>
+					<div class="col">
+						<Button className="w-100" color="success">
+							View Invoice
+						</Button>
+					</div>
+				</div>
+			</div>
+		}>
+		<CircleCheck
+			size={64}
+			style={{ width: "64px", height: "64px" }}
+			color="#2fb344"
+		/>
+		<h3>Payment succedeed</h3>
+		<div class="text-muted">
+			Your payment of $290 has been successfully submitted. Your invoice
+			has been sent to support@tabler.io.
+		</div>
+	</Modal>
+</Playground>
+
+## Properties
+
+<Props of={Modal} />

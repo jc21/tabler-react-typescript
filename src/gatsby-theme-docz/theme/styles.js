@@ -25,6 +25,10 @@ styles.root['div[data-testid="main-container"]'] = {
 	},
 };
 
+styles.root['div[data-testid="live-preview"]'] = {
+	backgroundColor: "#f2f2f2",
+};
+
 // Changes for Tabler specifically for documentation
 styles.root[".dropdown-menu.demo"] = {
 	display: "inline-block",
