@@ -4,6 +4,9 @@
 > [tabler-react](https://github.com/tabler/tabler-react/) which is no longer
 > developed.
 
+_Note: this project is still in development. See the
+[development status](STATUS.md)_
+
 <p>
   <a href="https://tabler-react-typescript.jc21.com?utm_source=github">
     <img src="https://img.shields.io/badge/documentation-blue.svg?style=for-the-badge"/>
@@ -34,6 +37,8 @@ Refer to the
 
 ```bash
 git clone https://github.com/jc21/tabler-react-typescript.git
+cd tabler-react-typescript
+yarn build
 ```
 
 ### Testing
