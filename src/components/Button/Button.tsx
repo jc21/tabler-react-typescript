@@ -31,6 +31,14 @@ export interface ButtonProps {
 	 * Button size
 	 */
 	size?: "sm" | "lg";
+	/**
+	 * Is this button only showing an icon?
+	 */
+	iconOnly?: boolean;
+	/**
+	 * On click handler
+	 */
+	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 export const Button: React.FC<ButtonProps> = ({
 	children,
@@ -40,11 +48,14 @@ export const Button: React.FC<ButtonProps> = ({
 	loading,
 	shape,
 	size,
+	iconOnly,
+	onClick,
 }) => {
 	const classes = [
 		"btn",
 		{
 			disabled: disabled,
+			"btn-icon": iconOnly,
 			"btn-loading": loading,
 			[`btn-${size}`]: !!size,
 		},
@@ -61,7 +72,10 @@ export const Button: React.FC<ButtonProps> = ({
 	modifier && classes.push(`btn${modifier}`);
 
 	return (
-		<button className={cn(classes, className)} aria-label="Button">
+		<button
+			className={cn(classes, className)}
+			aria-label="Button"
+			onClick={onClick}>
 			{children}
 		</button>
 	);

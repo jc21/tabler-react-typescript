@@ -15,7 +15,7 @@ Based on the current
 | Card          | Complete    |                        |
 | Carousel      | Incomplete  | Requires functionality |
 | Divider       | Complete    |                        |
-| Dropdown      | Complete    |                        |
+| Dropdown      | Incomplete  | todo With checkboxes   |
 | Dropdown.Item | Complete    |                        |
 | Empty         | Complete    |                        |
 | Flag          | Not started |                        |

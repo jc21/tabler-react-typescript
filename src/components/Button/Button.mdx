@@ -7,6 +7,28 @@ edit: false
 import { Playground, Props } from "docz";
 import { Button } from "./Button.tsx";
 import { ButtonList } from "../ButtonList/ButtonList.tsx";
+import {
+	Activity,
+	BrandBitbucket,
+	BrandDribbble,
+	BrandFacebook,
+	BrandFlickr,
+	BrandGithub,
+	BrandGoogle,
+	BrandInstagram,
+	BrandPinterest,
+	BrandTabler,
+	BrandTwitter,
+	BrandVimeo,
+	BrandVk,
+	BrandYoutube,
+	Bell,
+	ChartBar,
+	GitMerge,
+	Rss,
+	Star,
+	Trash,
+} from "tabler-icons-react";
 
 # Button
 
@@ -293,6 +315,31 @@ button size to your design and encourage users to take actions.
 	</ButtonList>
 </Playground>
 
+## Icons
+
+<Playground>
+	<ButtonList>
+		<Button color="primary" iconOnly>
+			<Activity />
+		</Button>
+		<Button color="success" iconOnly>
+			<Bell />
+		</Button>
+		<Button color="warning" iconOnly>
+			<Star />
+		</Button>
+		<Button color="danger" iconOnly>
+			<Trash />
+		</Button>
+		<Button color="purple" iconOnly>
+			<ChartBar />
+		</Button>
+		<Button color="white" iconOnly>
+			<GitMerge />
+		</Button>
+	</ButtonList>
+</Playground>
+
 ## Social
 
 You can use the icons of popular social networking sites, which users are
@@ -301,20 +348,94 @@ or follow a website with just one click, without leaving the website.
 
 <Playground>
 	<ButtonList>
-		<Button color="facebook">Facebook</Button>
-		<Button color="twitter">Twitter</Button>
-		<Button color="google">Google</Button>
-		<Button color="youtube">Youtube</Button>
-		<Button color="vimeo">Vimeo</Button>
-		<Button color="dribble">Dribble</Button>
-		<Button color="github">Github</Button>
-		<Button color="instagram">Instagram</Button>
-		<Button color="pinterest">Pinterest</Button>
-		<Button color="vk">VK</Button>
-		<Button color="rss">RSS</Button>
-		<Button color="flickr">Flickr</Button>
-		<Button color="bitbucket">Bitbucket</Button>
-		<Button color="tabler">Tabler</Button>
+		<Button color="facebook">
+			<BrandFacebook /> Facebook
+		</Button>
+		<Button color="twitter">
+			<BrandTwitter /> Twitter
+		</Button>
+		<Button color="google">
+			<BrandGoogle /> Google
+		</Button>
+		<Button color="youtube">
+			<BrandYoutube /> Youtube
+		</Button>
+		<Button color="vimeo">
+			<BrandVimeo /> Vimeo
+		</Button>
+		<Button color="dribbble">
+			<BrandDribbble /> Dribbble
+		</Button>
+		<Button color="github">
+			<BrandGithub /> Github
+		</Button>
+		<Button color="instagram">
+			<BrandInstagram />
+			Instagram
+		</Button>
+		<Button color="pinterest">
+			<BrandPinterest /> Pinterest
+		</Button>
+		<Button color="vk">
+			<BrandVk /> VK
+		</Button>
+		<Button color="rss">
+			<Rss /> RSS
+		</Button>
+		<Button color="flickr">
+			<BrandFlickr /> Flickr
+		</Button>
+		<Button color="bitbucket">
+			<BrandBitbucket /> Bitbucket
+		</Button>
+		<Button color="tabler">
+			<BrandTabler /> Tabler
+		</Button>
+	</ButtonList>
+	<hr />
+	<ButtonList>
+		<Button color="facebook" iconOnly>
+			<BrandFacebook />
+		</Button>
+		<Button color="twitter" iconOnly>
+			<BrandTwitter />
+		</Button>
+		<Button color="google" iconOnly>
+			<BrandGoogle />
+		</Button>
+		<Button color="youtube" iconOnly>
+			<BrandYoutube />
+		</Button>
+		<Button color="vimeo" iconOnly>
+			<BrandVimeo />
+		</Button>
+		<Button color="dribbble" iconOnly>
+			<BrandDribbble />
+		</Button>
+		<Button color="github" iconOnly>
+			<BrandGithub />
+		</Button>
+		<Button color="instagram" iconOnly>
+			<BrandInstagram />
+		</Button>
+		<Button color="pinterest" iconOnly>
+			<BrandPinterest />
+		</Button>
+		<Button color="vk" iconOnly>
+			<BrandVk />
+		</Button>
+		<Button color="rss" iconOnly>
+			<Rss />
+		</Button>
+		<Button color="flickr" iconOnly>
+			<BrandFlickr />
+		</Button>
+		<Button color="bitbucket" iconOnly>
+			<BrandBitbucket />
+		</Button>
+		<Button color="tabler" iconOnly>
+			<BrandTabler />
+		</Button>
 	</ButtonList>
 </Playground>
 
