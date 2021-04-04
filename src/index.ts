@@ -19,6 +19,7 @@ export * from "./components/Carousel";
 export * from "./components/Divider";
 export * from "./components/Dropdown";
 export * from "./components/Empty";
+export * from "./components/Flag";
 export * from "./components/ImageCard";
 export * from "./components/Modal";
 export * from "./components/Progress";

@@ -15,10 +15,10 @@ Based on the current
 | Card          | Complete    |                        |
 | Carousel      | Incomplete  | Requires functionality |
 | Divider       | Complete    |                        |
-| Dropdown      | Incomplete  | todo With checkboxes   |
+| Dropdown      | Complete    |                        |
 | Dropdown.Item | Complete    |                        |
 | Empty         | Complete    |                        |
-| Flag          | Not started |                        |
+| Flag          | Complete    |                        |
 | ImageCard     | Complete    |                        |
 | Modal         | Complete    |                        |
 | PageHeader    | Complete    |                        |

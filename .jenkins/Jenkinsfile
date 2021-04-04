@@ -10,7 +10,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn --registry=https://registry.npmjs.org install'
+				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn install'
 				sh 'docker run --rm -v $(pwd):/app -w /app node:12-slim yarn build'
 			}
 		}

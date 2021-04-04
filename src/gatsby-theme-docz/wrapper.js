@@ -8,7 +8,11 @@ const Wrapper = ({ children, doc }) => (
 		<Helmet>
 			<link
 				rel="stylesheet"
-				href="https://unpkg.com/@tabler/core@1.0.0-beta/dist/css/tabler.min.css"
+				href="https://unpkg.com/@tabler/core@1.0.0-beta2/dist/css/tabler.min.css"
+			/>
+			<link
+				rel="stylesheet"
+				href="https://unpkg.com/@tabler/core@1.0.0-beta2/dist/css/tabler-flags.min.css"
 			/>
 		</Helmet>
 		{children}
