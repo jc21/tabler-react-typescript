@@ -1,21 +1,21 @@
 ---
-name: PageHeader
-route: /components/PageHeader
+name: Page.Header
+route: /components/Page.Header
 edit: false
 ---
 
 import { Playground, Props } from "docz";
-import { PageHeader } from "./PageHeader.tsx";
+import { Page } from "./Page.tsx";
 import { Button } from "../Button/Button.tsx";
 import { ButtonList } from "../ButtonList/ButtonList.tsx";
 import { Breadcrumb } from "../Breadcrumb/Breadcrumb.tsx";
 
-# PageHeader
+# Page.Header
 
 ## Usage
 
 <Playground>
-	<PageHeader
+	<Page.Header
 		title="Example 1"
 		preTitle="Pre Title 1"
 		subTitle="Sub Title 1"
@@ -25,18 +25,18 @@ import { Breadcrumb } from "../Breadcrumb/Breadcrumb.tsx";
 ## With Buttons
 
 <Playground>
-	<PageHeader title="Example 2" subTitle="Sub-title 2">
+	<Page.Header title="Example 2" subTitle="Sub-title 2">
 		<ButtonList>
 			<Button color="primary">Edit</Button>
 			<Button color="teal">Subscribe</Button>
 		</ButtonList>
-	</PageHeader>
+	</Page.Header>
 </Playground>
 
 ## With Breadcrumb
 
 <Playground>
-	<PageHeader
+	<Page.Header
 		title="Example 3"
 		breadcrumb={
 			<Breadcrumb>
@@ -57,7 +57,7 @@ import { Breadcrumb } from "../Breadcrumb/Breadcrumb.tsx";
 ## With Border
 
 <Playground>
-	<PageHeader
+	<Page.Header
 		title="Example 4"
 		preTitle="Pre Title 4"
 		subTitle="Sub Title 4"
@@ -67,4 +67,4 @@ import { Breadcrumb } from "../Breadcrumb/Breadcrumb.tsx";
 
 ## Properties
 
-<Props of={PageHeader} />
+<Props of={Page.Header} />

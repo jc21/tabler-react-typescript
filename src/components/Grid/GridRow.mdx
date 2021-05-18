@@ -1,0 +1,136 @@
+---
+name: Grid.Row
+route: /components/Grid.Row
+edit: false
+---
+
+import { Playground, Props } from "docz";
+import { Grid } from "./Grid.tsx";
+import { Card } from "../Card/Card.tsx";
+
+# Grid.Row
+
+## Usage
+
+<Playground>
+	<Grid.Row className="p-2 g-2">
+		<Grid.Col>
+			<div
+				style={{
+					width: "100%",
+					height: "100%",
+					border: "1px grey solid",
+				}}>
+				A
+			</div>
+		</Grid.Col>
+		<Grid.Col>
+			<div
+				style={{
+					width: "100%",
+					height: "100%",
+					border: "1px grey solid",
+				}}>
+				B
+			</div>
+		</Grid.Col>
+		<Grid.Col>
+			<div
+				style={{
+					width: "100%",
+					height: "100%",
+					border: "1px grey solid",
+				}}>
+				C
+			</div>
+		</Grid.Col>
+	</Grid.Row>
+	<Grid.Row className="p-2 g-2">
+		<Grid.Col>
+			<div
+				style={{
+					width: "100%",
+					height: "100%",
+					border: "1px grey solid",
+				}}>
+				A
+			</div>
+		</Grid.Col>
+		<Grid.Col>
+			<div
+				style={{
+					width: "100%",
+					height: "100%",
+					border: "1px grey solid",
+				}}>
+				B
+			</div>
+		</Grid.Col>
+		<Grid.Col>
+			<div
+				style={{
+					width: "100%",
+					height: "100%",
+					border: "1px grey solid",
+				}}>
+				C
+			</div>
+		</Grid.Col>
+	</Grid.Row>
+</Playground>
+
+## Rows of Cards
+
+<Playground>
+	<Grid.Row cards>
+		<Grid.Col>
+			<Card title="Title">A</Card>
+		</Grid.Col>
+		<Grid.Col>
+			<Card title="Title">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Aperiam deleniti fugit incidunt.
+			</Card>
+		</Grid.Col>
+		<Grid.Col>
+			<Card title="Title">C</Card>
+		</Grid.Col>
+	</Grid.Row>
+	<Grid.Row cards deck>
+		<Grid.Col>
+			<Card title="Title">A</Card>
+		</Grid.Col>
+		<Grid.Col>
+			<Card title="Title">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Aperiam deleniti fugit incidunt.
+			</Card>
+		</Grid.Col>
+		<Grid.Col>
+			<Card title="Title">C</Card>
+		</Grid.Col>
+	</Grid.Row>
+</Playground>
+
+## Row Alignment
+
+<Playground>
+	<Grid.Row cards alignItems="center">
+		<Grid.Col>
+			<Card title="Title">A</Card>
+		</Grid.Col>
+		<Grid.Col>
+			<Card title="Title">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Aperiam deleniti fugit incidunt.
+			</Card>
+		</Grid.Col>
+		<Grid.Col>
+			<Card title="Title">C</Card>
+		</Grid.Col>
+	</Grid.Row>
+</Playground>
+
+## Properties
+
+<Props of={Grid.Row} />

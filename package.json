@@ -1,6 +1,6 @@
 {
 	"name": "tabler-react-typescript",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "lib/index.js",
 	"module": "lib/index.esm.js",
 	"files": [

@@ -56,7 +56,7 @@ yarn build
 ### Documentation Development
 
 ```bash
-yarn docz:dev
+yarn docs:dev
 ```
 
 ## License
