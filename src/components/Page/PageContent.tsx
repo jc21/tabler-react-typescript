@@ -37,7 +37,7 @@ export const PageContent: React.FC<PageContentProps> = ({
 						<PageHeader
 							title={title}
 							subTitle={subTitle}
-							options={options}
+							// options={options}
 						/>
 					)}
 					{children}

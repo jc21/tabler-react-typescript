@@ -18,7 +18,7 @@ export interface PageHeaderProps {
 	/**
 	 * Page Title
 	 */
-	title: string;
+	title?: string;
 	/**
 	 * Pre Title
 	 */
