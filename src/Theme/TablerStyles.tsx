@@ -7,7 +7,7 @@ function TablerStyles() {
 		<Helmet>
 			<link
 				rel="stylesheet"
-				href="https://unpkg.com/@tabler/core@1.0.0-beta/dist/css/tabler.min.css"
+				href="https://unpkg.com/@tabler/core@1.0.0-beta3/dist/css/tabler.min.css"
 			/>
 		</Helmet>
 	);

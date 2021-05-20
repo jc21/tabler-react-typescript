@@ -1,0 +1,412 @@
+---
+name: Navigation.Header
+route: /components/Navigation.Header
+edit: false
+---
+
+import { Playground, Props } from "docz";
+import { BrandGithub, Heart, Star } from "tabler-icons-react";
+
+import { Navigation } from "./Navigation.tsx";
+import { Avatar } from "../Avatar/Avatar.tsx";
+import { Badge } from "../Badge/Badge.tsx";
+import { Button } from "../Button/Button.tsx";
+import { ButtonList } from "../ButtonList/ButtonList.tsx";
+import { Dropdown } from "../Dropdown/Dropdown.tsx";
+
+# Navigation.Header
+
+## Usage
+
+<Playground>
+	<Navigation.Header
+		brandContent={
+			<a href=".">
+				<img
+					src="https://preview.tabler.io/static/logo.svg"
+					alt="Tabler"
+					className="navbar-brand-image"
+					width="110"
+					height="32"
+				/>
+			</a>
+		}
+		buttonList={
+			<ButtonList>
+				<Button shape="outline" color="white">
+					<BrandGithub /> Source code
+				</Button>
+				<Button shape="outline" color="white">
+					<Heart /> Sponsor
+				</Button>
+			</ButtonList>
+		}
+		avatar={
+			<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
+		}
+		profileName="Mallory Hulme"
+		profileSubName="Geologist IV"
+		notifications="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad amet consectetur exercitationem fugiat in ipsa ipsum, natus odio quidem quod repudiandae sapiente. Amet debitis et magni maxime necessitatibus ullam."
+		hasUnreadNotifications={true}
+		profileItems={[
+			<Dropdown.Item key="m1-1">Set status</Dropdown.Item>,
+			<Dropdown.Item key="m1-2">Profile &amp; account</Dropdown.Item>,
+			<Dropdown.Item key="m1-3">Feedback</Dropdown.Item>,
+			<Dropdown.Item divider key="m1-4" />,
+			<Dropdown.Item key="m1-5">Settings</Dropdown.Item>,
+			<Dropdown.Item key="m1-6">Logout</Dropdown.Item>,
+		]}
+		menuItems={[
+			{
+				title: "First",
+				icon: <Star />,
+				active: true,
+			},
+			{
+				title: "Second",
+				icon: <Star />,
+				badge: <Badge color="red">2</Badge>,
+			},
+			{
+				title: "Third",
+				icon: <Star />,
+				dropdownItems: [
+					<Dropdown.Item key="d1-1">First</Dropdown.Item>,
+					<Dropdown.Item key="d1-2">Second</Dropdown.Item>,
+					<Dropdown.Item key="d1-3">Third</Dropdown.Item>,
+				],
+			},
+			{ title: "Disabled", icon: <Star />, disabled: true },
+		]}
+	/>
+</Playground>
+
+## Themes
+
+<Playground>
+	<Navigation.Header
+		theme="light"
+		brandContent={
+			<a href=".">
+				<img
+					src="https://preview.tabler.io/static/logo.svg"
+					alt="Tabler"
+					className="navbar-brand-image"
+					width="110"
+					height="32"
+				/>
+			</a>
+		}
+		avatar={
+			<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
+		}
+		profileName="Mallory Hulme"
+		profileSubName="Geologist IV"
+		className="mb-3"
+		menuItems={[
+			{
+				title: "First",
+				icon: <Star />,
+				active: true,
+			},
+			{
+				title: "Second",
+				icon: <Star />,
+			},
+			{
+				title: "Third",
+				icon: <Star />,
+				dropdownItems: [
+					<Dropdown.Item key="d1-1">First</Dropdown.Item>,
+					<Dropdown.Item key="d1-2">Second</Dropdown.Item>,
+					<Dropdown.Item key="d1-3">Third</Dropdown.Item>,
+				],
+			},
+			{ title: "Disabled", icon: <Star />, disabled: true },
+		]}
+	/>
+	<Navigation.Header
+		theme="dark"
+		brandContent={<a href=".">Dashboard</a>}
+		avatar={
+			<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
+		}
+		profileName="Mallory Hulme"
+		profileSubName="Geologist IV"
+		className="mb-3"
+		darkDropdowns
+		profileItems={[
+			<Dropdown.Item key="m2-1">Set status</Dropdown.Item>,
+			<Dropdown.Item key="m2-2">Profile &amp; account</Dropdown.Item>,
+			<Dropdown.Item key="m2-3">Feedback</Dropdown.Item>,
+			<Dropdown.Item divider key="m2-4" />,
+			<Dropdown.Item key="m2-5">Settings</Dropdown.Item>,
+			<Dropdown.Item key="m2-6">Logout</Dropdown.Item>,
+		]}
+		menuItems={[
+			{
+				title: "First",
+				icon: <Star />,
+				active: true,
+			},
+			{
+				title: "Second",
+				icon: <Star />,
+			},
+			{
+				title: "Third",
+				icon: <Star />,
+				darkDropdown: true,
+				dropdownItems: [
+					<Dropdown.Item key="d1-1">First</Dropdown.Item>,
+					<Dropdown.Item key="d1-2">Second</Dropdown.Item>,
+					<Dropdown.Item key="d1-3">Third</Dropdown.Item>,
+				],
+			},
+			{ title: "Disabled", icon: <Star />, disabled: true },
+		]}
+	/>
+	<Navigation.Header
+		theme="dark"
+		brandContent={
+			<a href=".">
+				<img
+					src="https://preview.tabler.io/static/logo-small-white.svg"
+					alt="Tabler"
+					className="navbar-brand-image"
+					width="110"
+					height="32"
+				/>
+			</a>
+		}
+		avatar={
+			<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
+		}
+		profileName="Mallory Hulme"
+		profileSubName="Geologist IV"
+		className="mb-3 bg-blue"
+		menuItems={[
+			{
+				title: "First",
+				icon: <Star />,
+				active: true,
+			},
+			{
+				title: "Second",
+				icon: <Star />,
+			},
+			{
+				title: "Third",
+				icon: <Star />,
+				dropdownItems: [
+					<Dropdown.Item key="d1-1">First</Dropdown.Item>,
+					<Dropdown.Item key="d1-2">Second</Dropdown.Item>,
+					<Dropdown.Item key="d1-3">Third</Dropdown.Item>,
+				],
+			},
+			{ title: "Disabled", icon: <Star />, disabled: true },
+		]}
+	/>
+	<Navigation.Header
+		theme="dark"
+		avatar={
+			<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
+		}
+		profileName="Mallory Hulme"
+		profileSubName="Geologist IV"
+		className="mb-3 bg-orange"
+		menuItems={[
+			{
+				title: "First",
+				icon: <Star />,
+				active: true,
+			},
+			{
+				title: "Second",
+				icon: <Star />,
+			},
+			{
+				title: "Third",
+				icon: <Star />,
+				dropdownItems: [
+					<Dropdown.Item key="d1-1">First</Dropdown.Item>,
+					<Dropdown.Item key="d1-2">Second</Dropdown.Item>,
+					<Dropdown.Item key="d1-3">Third</Dropdown.Item>,
+				],
+			},
+			{ title: "Disabled", icon: <Star />, disabled: true },
+		]}
+	/>
+</Playground>
+
+## Separated Menu
+
+<Playground>
+	<Navigation.Header
+		theme="light"
+		brandContent={
+			<a href=".">
+				<img
+					src="https://preview.tabler.io/static/logo.svg"
+					alt="Tabler"
+					className="navbar-brand-image"
+					width="110"
+					height="32"
+				/>
+			</a>
+		}
+		buttonList={
+			<ButtonList>
+				<Button shape="outline" color="white">
+					<BrandGithub /> Source code
+				</Button>
+				<Button shape="outline" color="white">
+					<Heart /> Sponsor
+				</Button>
+			</ButtonList>
+		}
+		avatar={
+			<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
+		}
+		profileName="Mallory Hulme"
+		profileSubName="Geologist IV"
+	/>
+	<Navigation.Menu
+		theme="light"
+		className="mb-3"
+		items={[
+			{
+				title: "First",
+				icon: <Star />,
+				active: true,
+			},
+			{
+				title: "Second",
+				icon: <Star />,
+			},
+			{
+				title: "Third",
+				icon: <Star />,
+				dropdownItems: [
+					<Dropdown.Item key="d1-1">First</Dropdown.Item>,
+					<Dropdown.Item key="d1-2">Second</Dropdown.Item>,
+					<Dropdown.Item key="d1-3">Third</Dropdown.Item>,
+				],
+			},
+			{ title: "Disabled", icon: <Star />, disabled: true },
+		]}
+		searchContent={
+			<form action="." method="get">
+				<div class="input-icon">
+					<span class="input-icon-addon">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<path
+								stroke="none"
+								d="M0 0h24v24H0z"
+								fill="none"></path>
+							<circle cx="10" cy="10" r="7"></circle>
+							<line x1="21" y1="21" x2="15" y2="15"></line>
+						</svg>
+					</span>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Search…"
+						aria-label="Search in website"
+					/>
+				</div>
+			</form>
+		}
+	/>
+	<Navigation.Header
+		theme="dark"
+		brandContent={<a href=".">Dashboard</a>}
+		buttonList={
+			<ButtonList>
+				<Button shape="outline" color="light">
+					<BrandGithub /> Source code
+				</Button>
+				<Button shape="outline" color="light">
+					<Heart /> Sponsor
+				</Button>
+			</ButtonList>
+		}
+		avatar={
+			<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
+		}
+		profileName="Mallory Hulme"
+		profileSubName="Geologist IV"
+	/>
+	<Navigation.Menu
+		theme="dark"
+		className="mb-3"
+		items={[
+			{
+				title: "First",
+				icon: <Star />,
+				active: true,
+			},
+			{
+				title: "Second",
+				icon: <Star />,
+			},
+			{
+				title: "Third",
+				icon: <Star />,
+				darkDropdown: true,
+				dropdownItems: [
+					<Dropdown.Item key="d1-1">First</Dropdown.Item>,
+					<Dropdown.Item key="d1-2">Second</Dropdown.Item>,
+					<Dropdown.Item key="d1-3">Third</Dropdown.Item>,
+				],
+			},
+			{ title: "Disabled", icon: <Star />, disabled: true },
+		]}
+		searchContent={
+			<form action="." method="get">
+				<div class="input-icon">
+					<span class="input-icon-addon">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<path
+								stroke="none"
+								d="M0 0h24v24H0z"
+								fill="none"></path>
+							<circle cx="10" cy="10" r="7"></circle>
+							<line x1="21" y1="21" x2="15" y2="15"></line>
+						</svg>
+					</span>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Search…"
+						aria-label="Search in website"
+					/>
+				</div>
+			</form>
+		}
+	/>
+</Playground>
+
+## Properties
+
+<Props of={Navigation.Header} />

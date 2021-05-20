@@ -36,9 +36,17 @@ export interface ButtonProps {
 	 */
 	iconOnly?: boolean;
 	/**
+	 * Link to url
+	 */
+	href?: string;
+	/**
+	 * target property, only used when href is set
+	 */
+	target?: string;
+	/**
 	 * On click handler
 	 */
-	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	onClick?: any;
 }
 export const Button: React.FC<ButtonProps> = ({
 	children,
@@ -49,6 +57,8 @@ export const Button: React.FC<ButtonProps> = ({
 	shape,
 	size,
 	iconOnly,
+	href,
+	target,
 	onClick,
 }) => {
 	const classes = [
@@ -70,6 +80,20 @@ export const Button: React.FC<ButtonProps> = ({
 
 	color && classes.push(`btn${modifier}-${color}`);
 	modifier && classes.push(`btn${modifier}`);
+
+	if (href) {
+		// Render a A tag
+		return (
+			<a
+				className={cn(classes, className)}
+				aria-label="Button"
+				href={href}
+				onClick={onClick}
+				target={target}>
+				{children}
+			</a>
+		);
+	}
 
 	return (
 		<button

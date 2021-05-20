@@ -1,0 +1,125 @@
+---
+name: Navigation.Menu
+route: /components/Navigation.Menu
+edit: false
+---
+
+import { Playground, Props } from "docz";
+import { Star } from "tabler-icons-react";
+
+import { Badge } from "../Badge/Badge.tsx";
+import { Dropdown } from "../Dropdown/Dropdown.tsx";
+import { Navigation } from "./Navigation.tsx";
+
+# Navigation.Menu
+
+## Usage
+
+<Playground>
+	<Navigation.Menu
+		theme="light"
+		items={[
+			{ title: "First", icon: <Star />, active: true, href: "./#" },
+			{
+				title: "Second",
+				icon: <Star />,
+				href: "./#",
+				badge: <Badge color="red">2</Badge>,
+			},
+			{
+				title: "Third",
+				icon: <Star />,
+				dropdownItems: [
+					<Dropdown.Item key="m1-1">First</Dropdown.Item>,
+					<Dropdown.Item key="m1-2">Second</Dropdown.Item>,
+					<Dropdown.Item key="m1-3">Third</Dropdown.Item>,
+				],
+			},
+			{
+				title: "Fourth",
+				icon: <Star />,
+				dropdownItems: [
+					<Dropdown.Item key="m2-1">Fourth</Dropdown.Item>,
+					<Dropdown.Item key="m2-2">Fifth</Dropdown.Item>,
+					<Dropdown.Item key="m2-3">Sixth</Dropdown.Item>,
+				],
+			},
+			{ title: "Disabled", icon: <Star />, disabled: true },
+		]}
+		className="mb-3"
+	/>
+	<Navigation.Menu
+		theme="dark"
+		items={[
+			{ title: "First", icon: <Star />, active: true, href: "./#" },
+			{
+				title: "Second",
+				icon: <Star />,
+				href: "./#",
+				badge: <Badge color="red">2</Badge>,
+			},
+			{
+				title: "Third",
+				icon: <Star />,
+				darkDropdown: true,
+				dropdownItems: [
+					<Dropdown.Item key="m1-1">First</Dropdown.Item>,
+					<Dropdown.Item key="m1-2">Second</Dropdown.Item>,
+					<Dropdown.Item key="m1-3">Third</Dropdown.Item>,
+				],
+			},
+			{
+				title: "Fourth",
+				icon: <Star />,
+				darkDropdown: true,
+				dropdownItems: [
+					<Dropdown.Item key="m2-1">Fourth</Dropdown.Item>,
+					<Dropdown.Item key="m2-2">Fifth</Dropdown.Item>,
+					<Dropdown.Item key="m2-3">Sixth</Dropdown.Item>,
+				],
+			},
+			{ title: "Disabled", icon: <Star />, disabled: true },
+		]}
+		className="mb-3"
+	/>
+	<Navigation.Menu
+		theme="dark"
+		items={[
+			{ title: "First", icon: <Star />, active: true, href: "./#" },
+			{
+				title: "Second",
+				icon: <Star />,
+				href: "./#",
+				badge: <Badge color="red">2</Badge>,
+			},
+			{
+				title: "Third",
+				icon: <Star />,
+				dropdownItems: [
+					<Dropdown.Item key="m1-1">First</Dropdown.Item>,
+					<Dropdown.Item key="m1-2">Second</Dropdown.Item>,
+					<Dropdown.Item key="m1-3">Third</Dropdown.Item>,
+				],
+			},
+			{
+				title: "Fourth",
+				icon: <Star />,
+				dropdownItems: [
+					<Dropdown.Item key="m2-1">Fourth</Dropdown.Item>,
+					<Dropdown.Item key="m2-2">Fifth</Dropdown.Item>,
+					<Dropdown.Item key="m2-3">Sixth</Dropdown.Item>,
+				],
+			},
+			{ title: "Disabled", icon: <Star />, disabled: true },
+		]}
+		className="bg-orange"
+	/>
+</Playground>
+
+## Properties
+
+<Props of={Navigation.Menu} />
+
+### Navigation.Menu.Item
+
+<Props of={Navigation.Menu.Item} />

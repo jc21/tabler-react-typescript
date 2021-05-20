@@ -25,6 +25,10 @@ export interface DropdownProps {
 	 * Dark mode for dropdown
 	 */
 	dark?: boolean;
+	/**
+	 * Force this to show
+	 */
+	show?: boolean;
 }
 export const Dropdown: React.FC<DropdownProps> = ({
 	children,
@@ -32,6 +36,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 	header,
 	arrow,
 	dark,
+	show,
 }) => {
 	return (
 		<div
@@ -39,6 +44,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 				"dropdown-menu",
 				arrow && "dropdown-menu-arrow",
 				dark && ["bg-dark", "text-white"],
+				show && "show",
 				className,
 			)}>
 			{header && <span className="dropdown-header">{header}</span>}

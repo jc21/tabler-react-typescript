@@ -32,6 +32,7 @@ export * from "./components/Flag";
 export * from "./components/Grid";
 export * from "./components/ImageCard";
 export * from "./components/Modal";
+export * from "./components/Navigation";
 export * from "./components/Page";
 export * from "./components/Progress";
 // export * from "./components/Site";
