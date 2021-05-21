@@ -3,11 +3,9 @@ import React, { ReactNode, useState } from "react";
 import cn from "classnames";
 import { Bell } from "tabler-icons-react";
 
-import { AvatarProps } from "../Avatar";
 import { Badge } from "../Badge";
 import { ButtonList } from "../ButtonList";
 import { Dropdown } from "../Dropdown";
-import { DropdownItemProps } from "../Dropdown/DropdownItem";
 import { NavigationMenu } from "./NavigationMenu";
 import { NavigationMenuItemProps } from "./NavigationMenuItem";
 
@@ -25,9 +23,9 @@ export interface NavigationHeaderProps {
 	 */
 	theme?: "transparent" | "light" | "dark";
 	/**
-	 * buttonList
+	 * Buttons to show in the header
 	 */
-	buttonList?: typeof ButtonList;
+	buttons?: ReactNode[];
 	/**
 	 * Notifications Content
 	 */
@@ -39,7 +37,7 @@ export interface NavigationHeaderProps {
 	/**
 	 * Avatar Object
 	 */
-	avatar?: React.FC<AvatarProps>;
+	avatar?: ReactNode;
 	/**
 	 * Profile name to show next to avatar
 	 */
@@ -51,7 +49,7 @@ export interface NavigationHeaderProps {
 	/**
 	 * Profile dropdown menu items
 	 */
-	profileItems?: [React.FC<DropdownItemProps>];
+	profileItems?: ReactNode[];
 	/**
 	 * Applies dark theme to Notifications and Profile dropdowns
 	 */
@@ -59,13 +57,13 @@ export interface NavigationHeaderProps {
 	/**
 	 * Navigation Menu within this Header
 	 */
-	menuItems?: [NavigationMenuItemProps];
+	menuItems?: NavigationMenuItemProps[];
 }
 export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
 	className,
 	theme = "transparent",
 	brandContent,
-	buttonList,
+	buttons,
 	notifications,
 	hasUnreadNotifications,
 	avatar,
@@ -96,9 +94,9 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
 					{brandContent}
 				</h1>
 				<div className="navbar-nav flex-row order-md-last">
-					{buttonList ? (
+					{buttons ? (
 						<div className="nav-item d-none d-md-flex me-3">
-							{buttonList}
+							<ButtonList>{buttons}</ButtonList>
 						</div>
 					) : null}
 					{notifications ? (
@@ -140,16 +138,20 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
 								backgroundColor: "transparent",
 							}}
 							className="nav-link d-flex lh-1 text-reset p-0"
-							aria-label="Open user menu"
+							aria-label={profileItems && "Open user menu"}
 							onClick={() => {
 								setProfileShown(!profileShown);
 							}}>
 							{avatar}
 							{profileName ? (
 								<div className="d-none d-xl-block ps-2">
-									<div>{profileName}</div>
+									<div style={{ textAlign: "left" }}>
+										{profileName}
+									</div>
 									{profileSubName ? (
-										<div className="mt-1 small text-muted">
+										<div
+											className="mt-1 small text-muted"
+											style={{ textAlign: "left" }}>
 											{profileSubName}
 										</div>
 									) : null}

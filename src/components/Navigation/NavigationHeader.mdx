@@ -11,7 +11,6 @@ import { Navigation } from "./Navigation.tsx";
 import { Avatar } from "../Avatar/Avatar.tsx";
 import { Badge } from "../Badge/Badge.tsx";
 import { Button } from "../Button/Button.tsx";
-import { ButtonList } from "../ButtonList/ButtonList.tsx";
 import { Dropdown } from "../Dropdown/Dropdown.tsx";
 
 # Navigation.Header
@@ -31,16 +30,14 @@ import { Dropdown } from "../Dropdown/Dropdown.tsx";
 				/>
 			</a>
 		}
-		buttonList={
-			<ButtonList>
-				<Button shape="outline" color="white">
-					<BrandGithub /> Source code
-				</Button>
-				<Button shape="outline" color="white">
-					<Heart /> Sponsor
-				</Button>
-			</ButtonList>
-		}
+		buttons={[
+			<Button shape="outline" color="white">
+				<BrandGithub /> Source code
+			</Button>,
+			<Button shape="outline" color="white">
+				<Heart /> Sponsor
+			</Button>,
+		]}
 		avatar={
 			<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
 		}
@@ -255,16 +252,14 @@ import { Dropdown } from "../Dropdown/Dropdown.tsx";
 				/>
 			</a>
 		}
-		buttonList={
-			<ButtonList>
-				<Button shape="outline" color="white">
-					<BrandGithub /> Source code
-				</Button>
-				<Button shape="outline" color="white">
-					<Heart /> Sponsor
-				</Button>
-			</ButtonList>
-		}
+		buttons={[
+			<Button shape="outline" color="white">
+				<BrandGithub /> Source code
+			</Button>,
+			<Button shape="outline" color="white">
+				<Heart /> Sponsor
+			</Button>,
+		]}
 		avatar={
 			<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
 		}
@@ -297,11 +292,11 @@ import { Dropdown } from "../Dropdown/Dropdown.tsx";
 		]}
 		searchContent={
 			<form action="." method="get">
-				<div class="input-icon">
-					<span class="input-icon-addon">
+				<div className="input-icon">
+					<span className="input-icon-addon">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="icon"
+							className="icon"
 							width="24"
 							height="24"
 							viewBox="0 0 24 24"
@@ -320,7 +315,7 @@ import { Dropdown } from "../Dropdown/Dropdown.tsx";
 					</span>
 					<input
 						type="text"
-						class="form-control"
+						className="form-control"
 						placeholder="Search…"
 						aria-label="Search in website"
 					/>
@@ -331,16 +326,14 @@ import { Dropdown } from "../Dropdown/Dropdown.tsx";
 	<Navigation.Header
 		theme="dark"
 		brandContent={<a href=".">Dashboard</a>}
-		buttonList={
-			<ButtonList>
-				<Button shape="outline" color="light">
-					<BrandGithub /> Source code
-				</Button>
-				<Button shape="outline" color="light">
-					<Heart /> Sponsor
-				</Button>
-			</ButtonList>
-		}
+		buttons={[
+			<Button shape="outline" color="white">
+				<BrandGithub /> Source code
+			</Button>,
+			<Button shape="outline" color="white">
+				<Heart /> Sponsor
+			</Button>,
+		]}
 		avatar={
 			<Avatar url="https://tabler-react-typescript.jc21.com/assets/000m.jpg" />
 		}
@@ -374,11 +367,11 @@ import { Dropdown } from "../Dropdown/Dropdown.tsx";
 		]}
 		searchContent={
 			<form action="." method="get">
-				<div class="input-icon">
-					<span class="input-icon-addon">
+				<div className="input-icon">
+					<span className="input-icon-addon">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="icon"
+							className="icon"
 							width="24"
 							height="24"
 							viewBox="0 0 24 24"
@@ -397,7 +390,7 @@ import { Dropdown } from "../Dropdown/Dropdown.tsx";
 					</span>
 					<input
 						type="text"
-						class="form-control"
+						className="form-control"
 						placeholder="Search…"
 						aria-label="Search in website"
 					/>

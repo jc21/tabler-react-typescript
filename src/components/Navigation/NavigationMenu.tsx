@@ -23,7 +23,7 @@ export interface NavigationMenuProps {
 	/**
 	 * Navigation Items
 	 */
-	items: [NavigationMenuItemProps];
+	items: NavigationMenuItemProps[];
 	/**
 	 * If this menu sits within a Navigation.Header
 	 */

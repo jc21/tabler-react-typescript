@@ -3,7 +3,6 @@ import React, { ReactNode } from "react";
 import cn from "classnames";
 
 import { Dropdown } from "../Dropdown";
-import { DropdownItemProps } from "../Dropdown/DropdownItem";
 
 export interface NavigationMenuItemProps {
 	/**
@@ -33,7 +32,7 @@ export interface NavigationMenuItemProps {
 	/**
 	 * Provide dropdown items if this is to be a dropdown menu
 	 */
-	dropdownItems?: [React.FC<DropdownItemProps>];
+	dropdownItems?: ReactNode[];
 	/**
 	 * State of the dropdown being shown
 	 */
