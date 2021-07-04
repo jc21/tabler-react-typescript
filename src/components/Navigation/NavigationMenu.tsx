@@ -6,6 +6,10 @@ import {
 	NavigationMenuItem,
 	NavigationMenuItemProps,
 } from "./NavigationMenuItem";
+import {
+	NavigationMenuLink,
+	NavigationMenuLinkProps,
+} from "./NavigationMenuLink";
 
 /**
  * This menu handles the state of the dropdowns being shown, instead of state
@@ -23,7 +27,7 @@ export interface NavigationMenuProps {
 	/**
 	 * Navigation Items
 	 */
-	items: NavigationMenuItemProps[];
+	items: NavigationMenuItemProps[] | NavigationMenuLinkProps[];
 	/**
 	 * If this menu sits within a Navigation.Header
 	 */
@@ -83,7 +87,7 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
 
 	return wrapMenu(
 		<ul className="navbar-nav">
-			{items.map((item, idx) => {
+			{items.map((item: any, idx: number) => {
 				const onClickItem = (
 					e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
 				) => {
@@ -103,3 +107,4 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
 };
 
 NavigationMenu.Item = NavigationMenuItem;
+NavigationMenu.Link = NavigationMenuLink;
