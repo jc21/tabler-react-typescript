@@ -93,14 +93,24 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
 				) => {
 					itemClicked(e, item, idx);
 				};
-				return (
-					<NavigationMenuItem
-						key={`navmenu-${idx}`}
-						{...item}
-						onClick={onClickItem}
-						dropdownShow={dropdownShown === idx}
-					/>
-				);
+				if (typeof item.to !== "undefined") {
+					return (
+						<NavigationMenuLink
+							key={`navmenu-${idx}`}
+							{...item}
+							onClick={onClickItem}
+						/>
+					);
+				} else {
+					return (
+						<NavigationMenuItem
+							key={`navmenu-${idx}`}
+							{...item}
+							onClick={onClickItem}
+							dropdownShow={dropdownShown === idx}
+						/>
+					);
+				}
 			})}
 		</ul>,
 	);
